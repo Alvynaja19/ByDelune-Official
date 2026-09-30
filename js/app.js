@@ -170,6 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>
             <h4 class="text-body-md font-medium text-on-surface">${item.title}</h4>
             <p class="text-body-sm text-on-surface-variant">${item.variant}</p>
+            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="link-editorial text-body-sm" style="display: inline-flex; align-items: center; gap: 2px; margin-top: 3px; font-weight: 500;">
+              <span>Buy on Shopee</span>
+              <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
+            </a>
             <div class="qty-control">
               <button class="qty-btn" data-qty-delta="-1" aria-label="Decrease quantity">−</button>
               <span class="qty-number">${item.quantity}</span>
@@ -254,15 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Checkout Button
-  document.getElementById('cart-checkout-btn')?.addEventListener('click', () => {
+  document.getElementById('cart-checkout-btn')?.addEventListener('click', (e) => {
     if (state.cart.length === 0) {
+      e.preventDefault();
       showToast('Your bag is currently empty.');
       return;
     }
-    showToast('Proceeding to secure checkout...');
-    setTimeout(() => {
-      alert('Mock checkout initiated. In production, this directs to your secure payment gateway.');
-    }, 400);
+    showToast('Redirecting to ByDelune Official Shopee Store...');
   });
 
   // =========================================================================
@@ -355,9 +357,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4 class="text-body-md font-medium text-on-surface">${item.title}</h4>
           <p class="text-body-sm text-on-surface-variant">${item.variant || 'Standard'}</p>
           <p class="text-body-md font-medium text-on-surface mt-1">$${item.price}</p>
-          <button class="btn-primary" data-wish-to-cart="${item.id}" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem; margin-top: 0.5rem;">
-            Add to Bag
-          </button>
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem; text-decoration: none;">
+              <span>Buy on Shopee</span>
+              <span class="material-symbols-outlined" style="font-size: 12px; margin-left: 2px;">open_in_new</span>
+            </a>
+            <button class="btn-secondary" data-wish-to-cart="${item.id}" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem;">
+              Add to Bag
+            </button>
+          </div>
         </div>
         <div style="text-align: right;">
           <button class="text-body-sm text-on-surface-variant hover:text-on-surface" data-wish-remove="${item.id}" style="text-decoration: underline; cursor: pointer;">

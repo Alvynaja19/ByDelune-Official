@@ -12,6 +12,7 @@ Designed following the **Quiet Editorial** design system.
 - **Dynamic Catalog Filter**: Category filtering for New Arrivals (All, Clothing, Footwear, Accessories).
 - **Instant Search**: Lightweight catalog search modal with live query matching.
 - **Responsive Layout**: Fluid experience optimized from mobile devices (tap targets >= 44px) up to 1360px desktop grid.
+- **Shopee Direct Storefront Integration**: Integrated with the [ByDelune Official Shopee Store](https://s.shopee.co.id/2VrCqjmv7l) for seamless checkout, buyer protection, and courier tracking.
 - **Accessible & Lightweight**: Pure HTML, Vanilla CSS, and JavaScript with zero external runtime dependencies.
 
 ## Project Structure
