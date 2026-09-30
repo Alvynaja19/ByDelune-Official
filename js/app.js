@@ -1,6 +1,6 @@
 /**
  * BYDELUNE: Logika Aplikasi Storefront
- * Sesuai sistem desain Quiet Editorial & kelengkapan fungsional.
+ * Fitur Daftar Keinginan (Wishlist), Filter Katalog, Pencarian Cepat, dan Integrasi Shopee.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,27 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // =========================================================================
-  // State: Keranjang & Daftar Keinginan (Wishlist)
+  // State: Daftar Keinginan (Wishlist)
   // =========================================================================
   const state = {
-    cart: [
-      {
-        id: 'feat-1',
-        title: 'Sneakers Kulit Minimalis',
-        price: 389000,
-        variant: 'Off-White / 42 EU',
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBv-EnSnGGhZzj9JCrSQIoMsevwGtlG-l8V9CXeL3botanhWViFfLjExeIWsZ0eHtCADV0VQoqgKEie4I_tb2IHeQ3v5SqfiSXN_moxCirDMNlgL0f8Pld7M8f0doBVTEvHIDw2mrZXh3yxOoqTcwcFrfYmBX5OdIo6lp-vnSPfBEK0RfS2whjh7LGYX2aRlhpaovMrkDDUJldegByGw_DOBzA907GB3dGbm-Qj1ZU6yh55N0n-kg3URQ',
-        quantity: 1
-      },
-      {
-        id: 'feat-2',
-        title: 'Tas Bahu Terstruktur',
-        price: 520000,
-        variant: 'Kulit Hitam',
-        image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBMDihVXdFucERVeySp-04oQCn047PC6PaBvqJS57jIhwtMsoDJOgeQou261bkrva5qg-xBUClLGaVQYqgbzKk6-Ys-jSup_IVr6DJ3c24Etw4A_7WGei3Y_jkFxTIbhhYE_nHSISuU2dhNrq_6NnM7_XEUE-ggdKTHjSrolVYYJwivAEJH1S0Yffuxru-G5UsPkvPBfMb9Ae_jNgb4_sdXweuIjxJw_cdvIuyUl29N_jrSIe92YpareA',
-        quantity: 1
-      }
-    ],
     wishlist: new Set(['feat-1', 'new-2', 'new-6'])
   };
 
@@ -38,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Elemen DOM
   // =========================================================================
   const overlay = document.getElementById('drawer-overlay');
-  const cartDrawer = document.getElementById('cart-drawer');
   const wishlistDrawer = document.getElementById('wishlist-drawer');
   const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
   const searchModal = document.getElementById('search-modal');
@@ -46,12 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastNotice = document.getElementById('toast-notice');
 
   // Badge Counter
-  const cartCountBadges = document.querySelectorAll('.cart-count-badge');
   const wishlistCountBadges = document.querySelectorAll('.wishlist-count-badge');
 
-  // Kontainer Daftar
-  const cartItemsContainer = document.getElementById('cart-items-list');
-  const cartSubtotalEl = document.getElementById('cart-subtotal-val');
+  // Kontainer Daftar Keinginan
   const wishlistItemsContainer = document.getElementById('wishlist-items-list');
 
   // =========================================================================
@@ -73,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   function closeAllPanels() {
     overlay?.classList.remove('open');
-    cartDrawer?.classList.remove('open');
     wishlistDrawer?.classList.remove('open');
     mobileNavDrawer?.classList.remove('open');
     searchModal?.classList.remove('open');
@@ -100,15 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       closeAllPanels();
     }
-  });
-
-  // Buka Keranjang
-  document.querySelectorAll('[data-trigger-cart]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      renderCart();
-      openDrawer(cartDrawer);
-    });
   });
 
   // Buka Daftar Keinginan
@@ -142,135 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Tombol Tutup Pencarian
   document.getElementById('search-modal-close')?.addEventListener('click', closeAllPanels);
-
-  // =========================================================================
-  // Operasi Keranjang Belanja
-  // =========================================================================
-  function renderCart() {
-    if (!cartItemsContainer || !cartSubtotalEl) return;
-
-    const totalQty = state.cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountBadges.forEach(b => b.textContent = totalQty);
-
-    if (state.cart.length === 0) {
-      cartItemsContainer.innerHTML = `
-        <div class="empty-state">
-          <span class="material-symbols-outlined">shopping_bag</span>
-          <p class="text-body-md font-medium text-on-surface">Tas belanja Anda masih kosong</p>
-          <p class="text-body-sm mt-1">Temukan busana taktil dan aksesori esensial untuk rotasi gaya harian Anda.</p>
-        </div>
-      `;
-      cartSubtotalEl.textContent = 'Rp 0';
-      return;
-    }
-
-    let subtotal = 0;
-    cartItemsContainer.innerHTML = state.cart.map(item => {
-      subtotal += item.price * item.quantity;
-      return `
-        <div class="cart-item" data-id="${item.id}">
-          <div class="cart-item-img">
-            <img src="${item.image}" alt="${item.title}" loading="lazy" />
-          </div>
-          <div>
-            <h4 class="text-body-md font-medium text-on-surface">${item.title}</h4>
-            <p class="text-body-sm text-on-surface-variant">${item.variant}</p>
-            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="link-editorial text-body-sm" style="display: inline-flex; align-items: center; gap: 2px; margin-top: 3px; font-weight: 500;">
-              <span>Beli di Shopee</span>
-              <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
-            </a>
-            <div class="qty-control">
-              <button class="qty-btn" data-qty-delta="-1" aria-label="Kurangi jumlah">−</button>
-              <span class="qty-number">${item.quantity}</span>
-              <button class="qty-btn" data-qty-delta="1" aria-label="Tambah jumlah">+</button>
-            </div>
-          </div>
-          <div style="text-align: right;">
-            <p class="text-body-md font-medium text-on-surface">${formatRupiah(item.price * item.quantity)}</p>
-            <button class="text-body-sm text-on-surface-variant hover:text-on-surface mt-2" data-cart-remove="${item.id}" style="text-decoration: underline; cursor: pointer;">
-              Hapus
-            </button>
-          </div>
-        </div>
-      `;
-    }).join('');
-
-    cartSubtotalEl.textContent = formatRupiah(subtotal);
-
-    // Pasang listener kuantitas
-    cartItemsContainer.querySelectorAll('.cart-item').forEach(el => {
-      const id = el.getAttribute('data-id');
-      el.querySelectorAll('.qty-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const delta = parseInt(btn.getAttribute('data-qty-delta'), 10);
-          updateCartQuantity(id, delta);
-        });
-      });
-      el.querySelector('[data-cart-remove]')?.addEventListener('click', () => {
-        removeFromCart(id);
-      });
-    });
-  }
-
-  function addToCart(product) {
-    const existing = state.cart.find(i => i.id === product.id);
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      state.cart.push({ ...product, quantity: 1 });
-    }
-    renderCart();
-    showToast(`Ditambahkan "${product.title}" ke tas.`);
-    openDrawer(cartDrawer);
-  }
-
-  function updateCartQuantity(id, delta) {
-    const item = state.cart.find(i => i.id === id);
-    if (!item) return;
-    item.quantity += delta;
-    if (item.quantity <= 0) {
-      removeFromCart(id);
-    } else {
-      renderCart();
-    }
-  }
-
-  function removeFromCart(id) {
-    const item = state.cart.find(i => i.id === id);
-    state.cart = state.cart.filter(i => i.id !== id);
-    renderCart();
-    if (item) {
-      showToast(`Dihapus "${item.title}" dari tas.`);
-    }
-  }
-
-  // Tombol Tambah Cepat di Kartu
-  document.querySelectorAll('[data-quick-add]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const card = btn.closest('[data-product-id]');
-      if (!card) return;
-
-      const product = {
-        id: card.getAttribute('data-product-id'),
-        title: card.getAttribute('data-title'),
-        price: parseFloat(card.getAttribute('data-price')),
-        variant: card.getAttribute('data-variant') || 'Edisi Standar',
-        image: card.querySelector('img')?.src || ''
-      };
-      addToCart(product);
-    });
-  });
-
-  // Tombol Selesaikan Pembelian ke Shopee
-  document.getElementById('cart-checkout-btn')?.addEventListener('click', (e) => {
-    if (state.cart.length === 0) {
-      e.preventDefault();
-      showToast('Tas belanja Anda masih kosong.');
-      return;
-    }
-    showToast('Mengarahkan ke Toko Resmi Shopee ByDelune...');
-  });
 
   // =========================================================================
   // Operasi Daftar Keinginan (Wishlist)
@@ -361,14 +200,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4 class="text-body-md font-medium text-on-surface">${item.title}</h4>
           <p class="text-body-sm text-on-surface-variant">${item.variant || 'Standar'}</p>
           <p class="text-body-md font-medium text-on-surface mt-1">${formatRupiah(item.price)}</p>
-          <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
-            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem; text-decoration: none;">
+          <div style="margin-top: 0.75rem;">
+            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.6875rem; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
               <span>Beli di Shopee</span>
-              <span class="material-symbols-outlined" style="font-size: 12px; margin-left: 2px;">open_in_new</span>
+              <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
             </a>
-            <button class="btn-secondary" data-wish-to-cart="${item.id}" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem;">
-              Tambah ke Tas
-            </button>
           </div>
         </div>
         <div style="text-align: right;">
@@ -383,22 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         const id = btn.getAttribute('data-wish-remove');
         toggleWishlist(id, 'Produk');
-      });
-    });
-
-    wishlistItemsContainer.querySelectorAll('[data-wish-to-cart]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-wish-to-cart');
-        const card = document.querySelector(`[data-product-id="${id}"]`);
-        if (card) {
-          addToCart({
-            id,
-            title: card.getAttribute('data-title'),
-            price: parseFloat(card.getAttribute('data-price')),
-            variant: card.getAttribute('data-variant') || 'Standar',
-            image: card.querySelector('img')?.src
-          });
-        }
       });
     });
   }
@@ -502,6 +322,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Jalankan render awal
-  renderCart();
   updateWishlistBadges();
 });

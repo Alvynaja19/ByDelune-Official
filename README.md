@@ -7,7 +7,6 @@ Designed following the **Quiet Editorial** design system.
 ## Features
 
 - **Quiet Editorial Aesthetics**: Monochromatic warm palette, Geist typography, 4px sharp radius, and 1px hairline dividers without drop shadows or heavy blurs.
-- **Interactive Shopping Bag Drawer**: Live quantity adjustments, item removals, dynamic subtotal calculations, and checkout preview.
 - **Wishlist System**: Real-time bookmarking on product cards with synced counter badges and dedicated wishlist drawer.
 - **Dynamic Catalog Filter**: Category filtering for New Arrivals (All, Clothing, Footwear, Accessories).
 - **Instant Search**: Lightweight catalog search modal with live query matching.
