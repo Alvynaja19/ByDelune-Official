@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BYDELUNE · Busana Esensial Mewah &amp; Toko Arsitektural</title>
-  <meta name="description" content="ByDelune menghadirkan pakaian esensial sehari-hari dengan disiplin minimalis, tekstil organik beretika, dan presisi arsitektural." />
-  <meta name="keywords" content="ByDelune, pakaian esensial, quiet luxury Indonesia, busana minimalis, katun organik, kemeja pria wanita" />
+  <title>BYDELUNE · Architectural Essentials &amp; Catalog</title>
+  <meta name="description" content="ByDelune delivers refined everyday essentials crafted with tactile precision, organic textiles, and quiet luxury editorial discipline." />
+  <meta name="keywords" content="ByDelune, quiet luxury, minimal fashion, streetwear essentials, knitwear, caps, editorial catalog" />
   
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="BYDELUNE · Busana Esensial Mewah" />
-  <meta property="og:description" content="Pakaian esensial sehari-hari, dirancang lebih baik. Dibuat dengan presisi taktil dan garis rancang minimalis." />
+  <meta property="og:title" content="BYDELUNE · Architectural Essentials &amp; Catalog" />
+  <meta property="og:description" content="Discover a refined collection of breathable essentials made to move with you from coastal mornings to late evening escapes." />
+  <meta property="og:image" content="images/hero-banner.webp" />
   
-  <!-- Preconnect & Typography Fonts -->
+  <!-- Preconnect & Typography Fonts (Geist, Caveat, Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Geist:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
   
   <!-- Stylesheet -->
@@ -27,62 +28,75 @@
     "@context": "https://schema.org",
     "@type": "ClothingStore",
     "name": "BYDELUNE",
-    "description": "Busana esensial berkualitas tinggi dengan bahan organik etis dan presisi arsitektural.",
+    "description": "Refined everyday essentials crafted with architectural precision and quiet luxury.",
+    "url": "https://s.shopee.co.id/2VrCqjmv7l",
     "priceRange": "$$$",
-    "currenciesAccepted": "IDR"
+    "currenciesAccepted": "AED, IDR"
   }
   </script>
 </head>
 <body>
 
   <!-- =======================================================================
-       HEADER SITUS
+       ANNOUNCEMENT TOP BAR
        ======================================================================= -->
-  <header class="site-header">
-    <!-- Bar Pengumuman Atas -->
-    <div class="announcement-bar">
-      <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="link-editorial text-label-caps" style="letter-spacing: 0.12em;">
-        <span>Toko Resmi ByDelune di Shopee · Gratis Ongkir &amp; Perlindungan Pembeli</span>
-        <span class="material-symbols-outlined" style="font-size: 14px; margin-left: 2px;">open_in_new</span>
-      </a>
-    </div>
+  <div class="announcement-bar">
+    <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" aria-label="Visit Official ByDelune Shopee Store">
+      <span>Official ByDelune Store · Complimentary Shipping Worldwide &amp; Domestic</span>
+      <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
+    </a>
+  </div>
 
-    <!-- Bar Navigasi Utama -->
+  <!-- =======================================================================
+       STICKY SITE HEADER
+       ======================================================================= -->
+  <header class="site-header" id="site-header">
     <div class="container nav-main">
-      <!-- Wordmark Brand -->
-      <a href="#" class="brand-logo" aria-label="Beranda ByDelune">
+      <!-- Brand Wordmark -->
+      <a href="#" class="brand-logo" aria-label="ByDelune Home">
         <span>BYDELUNE</span>
       </a>
 
-      <!-- Menu Navigasi Desktop -->
-      <nav class="nav-links" aria-label="Navigasi Utama">
-        <a href="#new-arrivals" class="nav-link">Koleksi Terbaru</a>
-        <a href="#categories" class="nav-link">Kategori</a>
-        <a href="#featured" class="nav-link">Pilihan Terbaik</a>
-        <a href="#editorial" class="nav-link">Cerita Koleksi</a>
-        <a href="#client-care" class="nav-link">Layanan Pelanggan</a>
-        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="nav-link" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 2px;">
-          <span>Toko Shopee</span>
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#most-wanted" class="nav-link">Most Wanted</a>
+        <a href="#essentials" class="nav-link">Essentials</a>
+        <a href="#accessories" class="nav-link">Caps &amp; Accessories</a>
+        <a href="#summer26" class="nav-link">Summer26</a>
+        <a href="#editorial-stories" class="nav-link">Lookbook</a>
+        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="nav-link store-highlight" aria-label="Shopee Official Store">
+          <span>Shopee Store</span>
           <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
         </a>
       </nav>
 
-      <!-- Aksi Utilitas -->
+      <!-- Utility Actions -->
       <div class="nav-utilities">
-        <!-- Pencarian -->
-        <button class="search-bar-trigger" data-trigger-search aria-label="Buka pencarian">
-          <span class="material-symbols-outlined" style="margin-right: 0.375rem; font-size: 18px;">search</span>
-          <span class="text-body-sm">Cari produk...</span>
+        <!-- Dual Currency Switcher -->
+        <div class="currency-switcher" role="group" aria-label="Currency Selector">
+          <button class="currency-btn active" data-currency="AED" aria-pressed="true" aria-label="Display prices in United Arab Emirates Dirham">AED</button>
+          <button class="currency-btn" data-currency="IDR" aria-pressed="false" aria-label="Display prices in Indonesian Rupiah">IDR</button>
+        </div>
+
+        <!-- Search Button -->
+        <button class="icon-btn" data-trigger-search aria-label="Search catalog">
+          <span class="material-symbols-outlined">search</span>
         </button>
 
-        <!-- Daftar Keinginan -->
-        <button class="icon-btn" data-trigger-wishlist aria-label="Lihat produk tersimpan">
+        <!-- Wishlist Button -->
+        <button class="icon-btn" data-trigger-wishlist aria-label="Open saved wishlist">
           <span class="material-symbols-outlined">favorite</span>
-          <span class="badge-count wishlist-count-badge subtle">3</span>
+          <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
         </button>
 
-        <!-- Menu Hamburger Mobile -->
-        <button class="icon-btn mobile-menu-toggle" data-trigger-mobile-nav aria-label="Buka menu navigasi">
+        <!-- Shopping Bag Button -->
+        <button class="icon-btn" data-trigger-cart aria-label="Open shopping bag">
+          <span class="material-symbols-outlined">shopping_bag</span>
+          <span class="badge-count cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="icon-btn mobile-menu-toggle" data-trigger-mobile-nav aria-label="Open navigation menu">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
@@ -90,600 +104,417 @@
   </header>
 
   <!-- =======================================================================
-       KONTEN UTAMA
+       MAIN CONTENT
        ======================================================================= -->
   <main id="main-content">
 
-    <!-- 1. HERO SECTION (Editorial Lookbook Spread) -->
-    <section class="hero-section">
+    <!-- 1. HERO BANNER SECTION (FIGMA 1:1) -->
+    <section class="hero-banner-section" id="hero" aria-label="Hero Collection Banner">
       <div class="container">
-        <div class="hero-grid">
-          <!-- Kolom Teks Pengantar -->
-          <div class="hero-copy-col">
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-              <span class="bullet-dot"></span>
-              <span class="text-label-caps">Koleksi Terbaru / SS26</span>
-            </div>
-            
-            <h1 class="text-display" style="margin-bottom: 1.25rem;">
-              Pakaian esensial sehari-hari, dirancang lebih baik.
-            </h1>
-            
-            <p class="text-body-lg" style="color: var(--on-surface-variant); max-width: 440px; margin-bottom: 2rem;">
-              Pilihan busana yang dirancang untuk kenyamanan, kesederhanaan, dan gaya abadi. Dibuat dengan presisi material berkualitas dan garis rancang minimalis.
-            </p>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem;">
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
-              </a>
-              <a href="#new-arrivals" class="btn-secondary">Lihat Katalog</a>
-            </div>
-
-            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
-              <p class="text-label-md" style="color: var(--on-surface-variant);">
-                Diproduksi terbatas secara etis · Edisi 04
-              </p>
-            </div>
+        <h1 class="sr-only">DESIGNED FOR LONG SUMMER DAYS, WARM NIGHTS AND ENDLESS SUN</h1>
+        <div class="hero-banner-container">
+          <img 
+            src="images/hero-banner.webp" 
+            alt="Designed for long summer days, warm nights and endless sun: ByDelune Lookbook" 
+            class="hero-banner-image"
+            loading="eager"
+            width="2880"
+            height="1728"
+          />
+          <!-- Interactive Hotspot Buttons overlaying the visual design -->
+          <div class="hero-hotspots-layer" aria-hidden="false">
+            <a href="#most-wanted" class="hero-btn-hotspot hero-btn-shop" aria-label="Shop collection: scroll to Most Wanted"></a>
+            <a href="#most-wanted" class="hero-btn-hotspot hero-btn-wanted" aria-label="Most Wanted: scroll to Most Wanted collection"></a>
           </div>
+        </div>
 
-          <!-- Kolom Visual Lookbook -->
-          <div class="hero-media-wrapper">
-            <div class="hero-media-aspect">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY1e3-dqblaPgFiQhYZerr91Fm615t0qcatnDjoHTdtE_E5QBbgENvleWW0QkZ2i-aiHKUBZP7goY9ETVNpk-LVzKigXxt7WAqXh8zvNu0IKoZJbdCTAwJHT7zwqPPUhgmuVukbIceDnHVRczYbMCZ5hNExc-zwP9E_TOQ8pLf75nLDjwrG98Q3ToR7n8yK1h8xP6aXcXfaWguYT0IbsieDMXacNsiaJIcu7nJjhHL9W8Qs4W0-V8PbQ" 
-                alt="Foto lookbook editorial: Model dalam busana rajut krem berpadu celana lipit berdesain arsitektural."
-                loading="eager"
-              />
-            </div>
-            <div class="hero-caption-bar">
-              <span class="text-label-caps" style="color: var(--on-surface);">
-                Tampilan 01: Kaos Wol Santai &amp; Celana Lipit
-              </span>
-              <a href="#featured" class="link-editorial text-label-md">
-                Lihat Detail
-              </a>
-            </div>
-          </div>
+        <!-- Mobile Actions Fallback for small screens -->
+        <div class="hero-mobile-actions">
+          <a href="#most-wanted" class="btn-pill-dark">Shop Collection</a>
+          <a href="#most-wanted" class="btn-pill-outline">Most Wanted</a>
         </div>
       </div>
     </section>
 
-    <!-- 2. KATEGORI PRODUK -->
-    <section id="categories" class="section-editorial">
+    <!-- 2. MOST WANTED PRODUCT GRID (4 COLUMNS) -->
+    <section class="catalog-section" id="most-wanted" aria-label="Most Wanted Products">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="text-label-caps" style="display: block; margin-bottom: 0.25rem;">Indeks</span>
-            <h2 class="text-headline-md">Belanja Berdasarkan Kategori</h2>
-          </div>
-          <a href="#new-arrivals" class="link-editorial text-label-lg">
-            <span>Semua Kategori</span>
-            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
-          </a>
-        </div>
-
-        <div class="category-grid">
-          <!-- Kategori 1: Pria -->
-          <a href="#new-arrivals" class="category-card" onclick="document.querySelector('[data-filter=\'clothing\']')?.click();">
-            <div class="category-media">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkoAdYxm23ZBGWptAbTCpkrR_ghDthJfianx-GQ3uiUWzYUR7n2UQeIURHOQpu_xmWEh4BF7iQP3ivd14NFNwhYw_tXvbBg_fYJmyHh1Lbyn5PEqyRSTEJTyknhCWJZ3KhmsvqAqbKG4CPNZDWBPAS3tsbUCKZmLzQVWuQeZccJHBzMamAE1bELpVGgexW3IGiv9g62MlMCnriv-SRLpoy4ByFar8Jrf8YNQPjJLCqU557l5VwMR_WFA" 
-                alt="Kemeja linen santai pria dengan nuansa minimalis" 
-                loading="lazy" 
-              />
-            </div>
-            <div class="category-info">
-              <span class="text-headline-sm category-title">Pria</span>
-              <span class="text-body-sm">42 Produk</span>
-            </div>
-          </a>
-
-          <!-- Kategori 2: Wanita -->
-          <a href="#new-arrivals" class="category-card" onclick="document.querySelector('[data-filter=\'clothing\']')?.click();">
-            <div class="category-media">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Va7ztyD1LTsEJvrQ9vNp_cs-m5M3NOsFPCy8qO5eM1OKpVzm8Anu8DKjE1g8BdIqeAUgbcmAA4FHGoTTbvcUjjiDFgNILBEY4ExamKO9u5YNiF-3Pe2VeawT3qxKw_mzuL1CQkE47fBli4FXa9hZ5r_qKjJFx03_oU-UzUHKEfe0ybpU6GHC7o2BenTMjNd5RWYH5WyiF6Z1gvfoxlbZ3B9DB11MLEgQG_L5ry1DctI5HGVy23BLIw" 
-                alt="Potret editorial busana rajut dan celana berpinggang tinggi wanita" 
-                loading="lazy" 
-              />
-            </div>
-            <div class="category-info">
-              <span class="text-headline-sm category-title">Wanita</span>
-              <span class="text-body-sm">56 Produk</span>
-            </div>
-          </a>
-
-          <!-- Kategori 3: Alas Kaki -->
-          <a href="#new-arrivals" class="category-card" onclick="document.querySelector('[data-filter=\'shoes\']')?.click();">
-            <div class="category-media">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CIwWLr5I3HB6P8Mnd4omBJXqOPZoM3Wsfd-atzua6h0NVXyfbaTGU_1k9KKA0czygLg3fSg1gKzN4614BW-18j6Z-o2tmg9S6_6jVxFr5ef6QLjFHPdSrcE98qRbfwvAB7DDMV0NJ84udnEyTKYDpnoB3FeKzEU6V0lRDtIedPojKX27y6rnh1U4W1ycMEqbE7nLlY5LIRcOLTgesf2fSDW9O6GEcDhho4REZXosiPL4U1WPGIPstg" 
-                alt="Sepatu sneakers kulit nappa Italia warna putih bersih" 
-                loading="lazy" 
-              />
-            </div>
-            <div class="category-info">
-              <span class="text-headline-sm category-title">Alas Kaki</span>
-              <span class="text-body-sm">18 Produk</span>
-            </div>
-          </a>
-
-          <!-- Kategori 4: Aksesori -->
-          <a href="#new-arrivals" class="category-card" onclick="document.querySelector('[data-filter=\'accessories\']')?.click();">
-            <div class="category-media">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvY4J7LT19dR0pbALNyMxc74zuaKxWSZ3Z_iNWkz_W9euA8eQJ-ulybc9jNzaD6RCupeiIDrNscsS_wKgAEtO4b0pe5rqKPSB-D84Bn9Y9WDuE0IbB_dhVlIiXr06rB0f5t-zR4Gj1JyXlOWPUU9vJvKCGYAj28pxT21P8vxZmGoetwur1aFYtPa9R7TJh0y0BfUEb_lddGPyv9RhzgQsq7eGejqVFD_vG9_OcoDDHL7RjC2VCpna7Pw" 
-                alt="Tas bahu kulit hitam terstruktur dengan pengait perak" 
-                loading="lazy" 
-              />
-            </div>
-            <div class="category-info">
-              <span class="text-headline-sm category-title">Aksesori</span>
-              <span class="text-body-sm">24 Produk</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. PRODUK PILIHAN TERBAIK (4-Column Matrix) -->
-    <section id="featured" class="section-editorial">
-      <div class="container">
-        <div class="section-header-row">
-          <div>
-            <span class="text-label-caps" style="display: block; margin-bottom: 0.25rem;">Kurasi</span>
-            <h2 class="text-headline-md">Produk Pilihan</h2>
-          </div>
-          <a href="#new-arrivals" class="link-editorial text-label-lg">
-            <span>Lihat Semua</span>
-            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+        <div class="section-label-header">
+          <h2 class="section-tag-heading">Most Wanted</h2>
+          <a href="#split-banners" class="btn-view-all" style="padding: 0; border: none; font-size: 0.75rem;">
+            <span>Scroll Lookbook</span>
+            <span class="material-symbols-outlined" style="font-size: 14px;">arrow_downward</span>
           </a>
         </div>
 
         <div class="products-grid-4">
-          <!-- Item 1 -->
-          <div class="product-card" data-product-id="feat-1" data-title="Sneakers Kulit Minimalis" data-price="389000" data-variant="Off-White · Kulit Nappa Italia">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv-EnSnGGhZzj9JCrSQIoMsevwGtlG-l8V9CXeL3botanhWViFfLjExeIWsZ0eHtCADV0VQoqgKEie4I_tb2IHeQ3v5SqfiSXN_moxCirDMNlgL0f8Pld7M8f0doBVTEvHIDw2mrZXh3yxOoqTcwcFrfYmBX5OdIo6lp-vnSPfBEK0RfS2whjh7LGYX2aRlhpaovMrkDDUJldegByGw_DOBzA907GB3dGbm-Qj1ZU6yh55N0n-kg3URQ" 
-                alt="Foto studio sneakers kulit minimalis warna off-white" 
-                loading="lazy" 
-              />
-              <div class="product-badge-corner">
-                <span class="badge-solid">Terlaris</span>
+          <!-- Item 1: Bonjour Cable Sweater -->
+          <article class="product-card" data-product-id="prod-01" tabindex="0" aria-label="Bonjour Cable Sweater">
+            <div class="product-media-container">
+              <span class="product-card-badge">Most Wanted</span>
+              <button class="product-wishlist-btn" data-product-id="prod-01" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-01.webp" alt="Bonjour Cable Sweater in warm tobacco wool" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
               </div>
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
             </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Sneakers Kulit Minimalis</h3>
-              <span class="product-price">Rp 389.000</span>
+            <div class="product-meta">
+              <h3 class="product-title">Bonjour Cable Sweater</h3>
+              <span class="product-price">AED 349</span>
             </div>
-            <p class="text-body-sm">Off-White · Kulit Nappa Italia</p>
-          </div>
+          </article>
 
-          <!-- Item 2 -->
-          <div class="product-card" data-product-id="feat-2" data-title="Tas Bahu Terstruktur" data-price="520000" data-variant="Kulit Hitam · Pengunci Perak">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDihVXdFucERVeySp-04oQCn047PC6PaBvqJS57jIhwtMsoDJOgeQou261bkrva5qg-xBUClLGaVQYqgbzKk6-Ys-jSup_IVr6DJ3c24Etw4A_7WGei3Y_jkFxTIbhhYE_nHSISuU2dhNrq_6NnM7_XEUE-ggdKTHjSrolVYYJwivAEJH1S0Yffuxru-G5UsPkvPBfMb9Ae_jNgb4_sdXweuIjxJw_cdvIuyUl29N_jrSIe92YpareA" 
-                alt="Tas bahu kulit hitam terstruktur mewah dengan pengait perak" 
-                loading="lazy" 
-              />
-              <div class="product-badge-corner">
-                <span class="badge-subtle">Baru</span>
+          <!-- Item 2: Blow Up Tee -->
+          <article class="product-card" data-product-id="prod-02" tabindex="0" aria-label="Blow Up Tee">
+            <div class="product-media-container">
+              <span class="product-card-badge">Most Wanted</span>
+              <button class="product-wishlist-btn" data-product-id="prod-02" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-02.webp" alt="Blow Up Tee in striped racing green" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
               </div>
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
             </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Tas Bahu Terstruktur</h3>
-              <span class="product-price">Rp 520.000</span>
+            <div class="product-meta">
+              <h3 class="product-title">Blow Up Tee</h3>
+              <span class="product-price">AED 315</span>
             </div>
-            <p class="text-body-sm">Kulit Hitam · Pengunci Perak</p>
-          </div>
+          </article>
 
-          <!-- Item 3 -->
-          <div class="product-card" data-product-id="feat-3" data-title="Kaos Katun Oversize" data-price="189000" data-variant="Katun Mentah · Gramasi 280gsm">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv6l9xh6DE4MxoOWSCJ7MqklfdPUO1xIT-JfmCFZXINR2NQvva6KvaeYXiM955wjCMpudus50HoUmgFcKWJyrK8K8zg1FV72PKAq_bryaX6upzoqzB1GWZLL-S0BzhOFQUWVgE1RZaHb6RTaDUgRhEZ4kJaR5jpO1H_QucZM629pJmSGRYj-dzX0vIeeeSe2voOU_AlpyDcJXQ851V0AlCXsi8mZTWjhoL2mwagiJHxYmF6UeXik2J-g" 
-                alt="Kaos katun organik santai bernuansa ecru mentah" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
+          <!-- Item 3: Washed Zip Hoodie -->
+          <article class="product-card" data-product-id="prod-03" tabindex="0" aria-label="Washed Zip Hoodie">
+            <div class="product-media-container">
+              <span class="product-card-badge">Most Wanted</span>
+              <button class="product-wishlist-btn" data-product-id="prod-03" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-03.webp" alt="Washed Zip Hoodie in sun-faded charcoal" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
               </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
             </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Kaos Katun Oversize</h3>
-              <span class="product-price">Rp 189.000</span>
+            <div class="product-meta">
+              <h3 class="product-title">Washed Zip Hoodie</h3>
+              <span class="product-price">AED 374</span>
             </div>
-            <p class="text-body-sm">Katun Mentah · Gramasi 280gsm</p>
-          </div>
+          </article>
 
-          <!-- Item 4 -->
-          <div class="product-card" data-product-id="feat-4" data-title="Kemeja Katun Santai" data-price="289000" data-variant="Putih Kapur · Katun Poplin Jepang">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLMzrzj60Nlnvl_6XuqA6FdFO9jQJc8WA7V3JPRu7vefb0aBqKmTehgHA3RO-8YJHnzKdTS3EymAaS8RvghguTBo1Cf_RPrE5Lx1GYCuIKmbZPu33TtCWjHUfW-LVLZ_-wkhKN8A-_vq6RUio5d-vIdo0Y6NTNeSzRjo_3nYlfsNbFrxs9zhpNdmMkvQ76HxPmCrReNPBPksgBafLWPsplbzCn7tlY18DtBAavVSw2OlwIN8l3KVMWAw" 
-                alt="Kemeja poplin berpotongan santai warna putih kapur" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
+          <!-- Item 4: Matcha Club Tee -->
+          <article class="product-card" data-product-id="prod-04" tabindex="0" aria-label="Matcha Club Tee">
+            <div class="product-media-container">
+              <span class="product-card-badge">Most Wanted</span>
+              <button class="product-wishlist-btn" data-product-id="prod-04" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-04.webp" alt="Matcha Club Tee in optic white with ceramic art" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
               </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
             </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Kemeja Katun Santai</h3>
-              <span class="product-price">Rp 289.000</span>
+            <div class="product-meta">
+              <h3 class="product-title">Matcha Club Tee</h3>
+              <span class="product-price">AED 247</span>
             </div>
-            <p class="text-body-sm">Putih Kapur · Katun Poplin Jepang</p>
-          </div>
+          </article>
+        </div>
+
+        <div class="section-center-action">
+          <button class="btn-view-all" data-view-all-trigger="Most Wanted">
+            <span>View All</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- 4. EDITORIAL PROMOSI (Cerita Koleksi) -->
-    <section id="editorial" class="editorial-promo">
+    <!-- 3. SPLIT EDITORIAL BANNERS (2 COLUMNS) -->
+    <section class="split-banners-section" id="split-banners" aria-label="Featured Lookbook Banners">
       <div class="container">
-        <div class="promo-grid">
-          <!-- Visual -->
-          <div class="promo-media">
+        <div class="split-banners-grid">
+          <!-- Left Banner: Most Wanted -->
+          <div class="split-banner-item">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnzHX1FdL58VBbUormqaoJB08oUeJcXXeFAxgmfozxHuEgDFZ76Co2PuPNtGByKs2C2XYZOu0jylpqe4uKElA4QIooKNtVQ5BTL1BecbYY07rXCgUxzAWTQTdXDb0VHU8Slf1wzeULQ-pInXLYGwlIMt0orW3Rt4qXS4pT_zpBsyLMfx8C445q3MyhwkyQ25cio60enf8XpyBoXQy9xHik-NHag9JJR92GR7oWYSVerNlDQOTJLK5IYA" 
-              alt="Model berdiri di halaman modern mengenakan celana lipit berpinggang tinggi" 
-              loading="lazy" 
+              src="images/banner_split_left.webp" 
+              alt="Most Wanted Editorial Campaign" 
+              class="split-banner-image"
+              loading="lazy"
+              width="1440"
+              height="1801"
             />
+            <a href="#most-wanted" class="split-hotspot-btn split-hotspot-left" aria-label="Shop Most Wanted collection"></a>
           </div>
 
-          <!-- Konten & Komitmen -->
-          <div>
-            <span class="text-label-caps" style="display: block; margin-bottom: 0.5rem;">Koleksi Esensial</span>
-            <h2 class="text-headline-lg" style="margin-bottom: 1rem;">
-              Busana sederhana. Dibuat agar tahan lama.
-            </h2>
-            <p class="text-body-md" style="color: var(--on-surface-variant); margin-bottom: 1.5rem;">
-              Pakaian esensial sehari-hari yang dirancang dengan kenyamanan, kualitas, dan fleksibilitas pemakaian. Setiap busana dikembangkan dalam jumlah terbatas menggunakan serat tersertifikasi organik dan konstruksi presisi tinggi.
-            </p>
-
-            <ul class="spec-list">
-              <li class="spec-item">
-                <span class="bullet-dot"></span>
-                <span>100% Katun Organik Bersertifikat GOTS &amp; Wol Daur Ulang</span>
-              </li>
-              <li class="spec-item">
-                <span class="bullet-dot"></span>
-                <span>Proses cuci pakaian bebas plastik dan pewarna berbasis nabati</span>
-              </li>
-              <li class="spec-item">
-                <span class="bullet-dot"></span>
-                <span>Garansi perbaikan seumur hidup untuk seluruh jahitan struktural</span>
-              </li>
-            </ul>
-
-            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <span>Beli Koleksi di Shopee</span>
-              <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. RILISAN TERBARU (8 Produk dengan Tab Filter Interaktif) -->
-    <section id="new-arrivals" class="section-editorial">
-      <div class="container">
-        <div class="section-header-row" style="flex-direction: column; gap: 1rem; align-items: flex-start;">
-          <div style="display: flex; flex-direction: column; width: 100%;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
-              <div>
-                <span class="text-label-caps" style="display: block; margin-bottom: 0.25rem;">Edisi 04</span>
-                <h2 class="text-headline-md">Rilisan Terbaru</h2>
-                <p class="text-body-sm" style="margin-top: 0.25rem;">Siluet baru yang dirancang untuk rotasi busana harian Anda.</p>
-              </div>
-
-              <!-- Tab Filter Tipografis -->
-              <div class="filter-tabs-wrapper" id="filter-tabs">
-                <button class="filter-tab active" data-filter="all">Semua (8)</button>
-                <button class="filter-tab" data-filter="clothing">Pakaian</button>
-                <button class="filter-tab" data-filter="shoes">Alas Kaki</button>
-                <button class="filter-tab" data-filter="accessories">Aksesori</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="products-grid-4" id="new-arrivals-grid" style="margin-top: 2rem;">
-          <!-- Produk 1 -->
-          <div class="product-card" data-category="clothing" data-product-id="new-1" data-title="Kaos Katun Boxy Tebal" data-price="169000" data-variant="Charcoal Cuci · Katun 300gsm">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcNozbOwUAUOvnCqM2z07w--ow5baXb7Z41_MEFjtXQGZsFQPGGs8yHcSPjYJB7GKI00qrQ_sxzwtpudZh0TYSP4Ns4icgKf1ZpXJVGDQw1iHzH8uHJrYIQYpfs-y_SLpujCUATe782quV6edsDkfRXg5LXRU8q4xf87Dt8sz0W4I5D1hSXSqYWEGFWfEtUNpKpLOpFRlb_PaLXJ-svCIpOMjKONtfl8lCZcXBejHNPkRzSICUAnz3eA" 
-                alt="Kaos katun boxy tebal warna charcoal dilipat rapi di atas linen" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Kaos Katun Boxy Tebal</h3>
-              <span class="product-price">Rp 169.000</span>
-            </div>
-            <p class="text-body-sm">Charcoal Cuci · Katun 300gsm</p>
-          </div>
-
-          <!-- Produk 2 -->
-          <div class="product-card" data-category="shoes" data-product-id="new-2" data-title="Sandal Kulit Studio" data-price="349000" data-variant="Tuscan Tan · Insole Kulit Sapi">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnnvT0M-XViAVhcgR2eq5iTuKKv2Qn8nBayLsQYp70-1Cd9lLD8Om8kS0nDlIjvFJ45Fs4gFIA70c2Ougc6RwAte3cxt_U1_2i2B8hzc-LKDnDfgBmIPIEbXZLfemDx9JzehwaCnUnUgnrXDNP-ExX8-2d1kjQXeOzqaPTK4Uv0gmkigEISM0ligk5_46MDvY4D30PcBb2Ym3yT0mmeQf3W47xAVZtoyshGiuUup8l0pGd38coulvWqA" 
-                alt="Sandal slide kulit minimalis warna tan hangat" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Sandal Kulit Studio</h3>
-              <span class="product-price">Rp 349.000</span>
-            </div>
-            <p class="text-body-sm">Tuscan Tan · Insole Kulit Sapi</p>
-          </div>
-
-          <!-- Produk 3 -->
-          <div class="product-card" data-category="accessories" data-product-id="new-3" data-title="Tas Jinjing Kanvas Minimalis" data-price="229000" data-variant="Kanvas Alami · Duck Canvas 18oz">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9EXZ-DhlsO1MIZWm6cogsmCaH1Cgoe9hTCRHUY4xelRxjtpZ__WZvggJy8AIkNlsvZcIMyqXj7zqvQLEWNyQBWPaK-FPI4dXurfsZ2GkwSkQD3MZdTSXa8DZEtmKZMlV_zdX6SAYe1rknNOqE9k6Cr9n3dKTJIvm4DsUUtnMWXtWxT3NuUuqT27API7EcyNJG00lbTTajH8KegEDV7WYwLqfU-16ygcru8Ad8R61la0NHxudD97clqA" 
-                alt="Tas jinjing kanvas katun tebal terstruktur warna ecru alami" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Tas Jinjing Kanvas Minimalis</h3>
-              <span class="product-price">Rp 229.000</span>
-            </div>
-            <p class="text-body-sm">Kanvas Alami · Duck Canvas 18oz</p>
-          </div>
-
-          <!-- Produk 4 -->
-          <div class="product-card" data-category="clothing" data-product-id="new-4" data-title="Celana Chino Lipit Santai" data-price="439000" data-variant="Olive Gelap · Katun Twill Jepang">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6IBe_YBTbkJpnNgPkCO9mFJCYRBK_-qFzkY4P_CqQEwQ5tU_aJFz1hSNF_i49JHv1xTl6YYQLk4FV4-hp7QiiMYJvstCzu0CpfojWLG7LJ0klYu2boCIp0mt5nPGkPUi5MRa3K53P1VtFGN2D_tuKQqdkW7f3v2u9q979mEmZgTGPjwHilPtL2JlaHwocgQkwaFUb99w3jHoZUYUURnR7Zgd-Dm334C1iOgM2NV0p6dqpFmudQ9p8Hg" 
-                alt="Celana lipit longgar bahan katun twill jepang warna dusty olive" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Celana Chino Lipit Santai</h3>
-              <span class="product-price">Rp 439.000</span>
-            </div>
-            <p class="text-body-sm">Olive Gelap · Katun Twill Jepang</p>
-          </div>
-
-          <!-- Produk 5 -->
-          <div class="product-card" data-category="accessories" data-product-id="new-5" data-title="Dompet Kartu Kulit" data-price="189000" data-variant="Hitam Matte · Tepi Halus Buatan Tangan">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhlK54SMLoVMqpsxg-zj86_pNBFJjlGZHis81Z3kXvi7kBf5xKiJLwI-xOxgIsjTjVQYmU3VlX4K2LgOy8EbUlLtDufyXAShQYoDgMEpebD2sXS8jYnf-e6_BJI1rfnwMygwZ03bqCUUFdr5Il10uqbG40p9x2Bb5WY066PR9avODCG0Hlcd1XEiEcmlZvfMAobYgExJVE7PGGsaGrJ9Zn6ZpTe1Nc_ymuIQyrwK-Ip2prDMoNrhsR5w" 
-                alt="Dompet kartu tipis kulit sapi warna hitam matte" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Dompet Kartu Kulit</h3>
-              <span class="product-price">Rp 189.000</span>
-            </div>
-            <p class="text-body-sm">Hitam Matte · Tepi Halus Buatan Tangan</p>
-          </div>
-
-          <!-- Produk 6 -->
-          <div class="product-card" data-category="clothing" data-product-id="new-6" data-title="Rajut Mockneck Halus" data-price="489000" data-variant="Oat Melange · 100% Wol Merino Ekstra Halus">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2-aHP4dq0Yydyv0GahOYL-J_VNb3dl6sMXRoufbE4FNEcefu_94Mn9InHMKew99D3CtqgNEarMo5gSO4ZK-D_Mgf4eY2ts6VsyK_BxWY5bBvFUKDikJyWGzQ3PRvZQD0XwZrA4G11clXxLwmfd0peqvdLfEvtb_zLRJMQJ7CefE_rlzNriJDa_4w-VaH54joTvLSX4r7f3M6bD_AGmpeLq-8iM3hBKeDGm5X1jgguYzx0eiUWTyf5fA" 
-                alt="Busana rajut mockneck tanpa sambungan dengan benang wol oat melange" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Rajut Mockneck Halus</h3>
-              <span class="product-price">Rp 489.000</span>
-            </div>
-            <p class="text-body-sm">Oat Melange · 100% Wol Merino Ekstra Halus</p>
-          </div>
-
-          <!-- Produk 7 -->
-          <div class="product-card" data-category="accessories" data-product-id="new-7" data-title="Kupluk Rajut Fisherman" data-price="159000" data-variant="Forest Marl · Kasmir &amp; Bulu Domba">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGwrFF3V_NvL2H1gmnPlXjXiyKLWgohv33VDCT7J1MGexP_inS8LNsKfELxgBQ8MfZ1OqkqFcU7Yz6bgQMJjzFrVqrEt6_r9DhLIgES9iAaToWWAIF5vRvgf660ck4_4I0bu5e2wtmfRL57Drf234SRjIxToSdVQ1yn4np4r0Wt37B7BH26y7RPZx59bNTWPlN4bmyqHAIx9qCFa7x6W2dQ-NjGgxfFnZMEe7W-0EJY7u1JjMTPvfRdg" 
-                alt="Kupluk rajut fisherman warna hijau zaitun gelap" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Kupluk Rajut Fisherman</h3>
-              <span class="product-price">Rp 159.000</span>
-            </div>
-            <p class="text-body-sm">Forest Marl · Kasmir &amp; Bulu Domba</p>
-          </div>
-
-          <!-- Produk 8 -->
-          <div class="product-card" data-category="accessories" data-product-id="new-8" data-title="Syal Wol Halus" data-price="329000" data-variant="Camel Lembut · Wol Domba Skotlandia">
-            <div class="product-media-box">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeaBj2xqdBzzo6GQDXfkPlXRX3znNX_fXl44DQzVmgTV-X5r-dBjYio48kqziNqOimFvBdt0WgMKAs-0CjX5N6SGIZcnt_bll9qMifNDq9XKj1DFMeg_9KV1I9WNsGY4vc90KtjfrLzGnvedHFW7gzP8IyjPGwN2lfKtKRIjfdtwuEDLbe6KaKEq6lsTz-t7PygsvMEzyVlpPPUXOKXKN5PS3uPA1osGxIx-lhKrsfkypNdCH8nMUU4w" 
-                alt="Syal wol halus warna camel bertekstur lembut dengan pinggiran rumbai" 
-                loading="lazy" 
-              />
-              <div class="product-action-corner">
-                <button class="btn-card-action" data-wishlist-toggle aria-label="Simpan ke daftar keinginan" title="Simpan ke daftar keinginan">
-                  <span class="material-symbols-outlined">favorite</span>
-                </button>
-              </div>
-              <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="product-quick-add">
-                <span>Beli di Shopee</span>
-                <span class="material-symbols-outlined" style="font-size: 15px;">open_in_new</span>
-              </a>
-            </div>
-            <div class="product-meta-row">
-              <h3 class="product-name">Syal Wol Halus</h3>
-              <span class="product-price">Rp 329.000</span>
-            </div>
-            <p class="text-body-sm">Camel Lembut · Wol Domba Skotlandia</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. PILAR KEUNGGULAN LAYANAN -->
-    <section id="client-care" class="benefits-section">
-      <div class="container">
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <span class="material-symbols-outlined benefit-icon">local_shipping</span>
-            <h4 class="text-headline-sm" style="margin-bottom: 0.25rem;">Gratis Ongkir Shopee</h4>
-            <p class="text-body-sm">Nikmati voucher gratis ongkir resmi Shopee dengan kurir pengantaran langsung ke pintu rumah Anda.</p>
-          </div>
-
-          <div class="benefit-card">
-            <span class="material-symbols-outlined benefit-icon">verified_user</span>
-            <h4 class="text-headline-sm" style="margin-bottom: 0.25rem;">Garansi Shopee</h4>
-            <p class="text-body-sm">100% barang asli dengan proteksi pembayaran aman hingga pesanan diterima dengan baik.</p>
-          </div>
-
-          <div class="benefit-card">
-            <span class="material-symbols-outlined benefit-icon">replay</span>
-            <h4 class="text-headline-sm" style="margin-bottom: 0.25rem;">Pengembalian Mudah</h4>
-            <p class="text-body-sm">Garansi retur mudah dan pengembalian dana penuh didukung ketentuan resmi Shopee.</p>
-          </div>
-
-          <div class="benefit-card">
-            <span class="material-symbols-outlined benefit-icon">support_agent</span>
-            <h4 class="text-headline-sm" style="margin-bottom: 0.25rem;">Layanan Concierge</h4>
-            <p class="text-body-sm">Tim spesialis kami siap membantu Anda tujuh hari seminggu via obrolan Shopee maupun web.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. BERLANGGANAN WARTA (NEWSLETTER) -->
-    <section class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-box">
-          <span class="text-label-caps" style="display: block; margin-bottom: 0.5rem;">Warta ByDelune</span>
-          <h2 class="text-headline-lg" style="margin-bottom: 0.75rem;">Bergabung dengan komunitas ByDelune</h2>
-          <p class="text-body-md" style="color: var(--on-surface-variant); margin-bottom: 1.5rem;">
-            Dapatkan akses awal eksklusif untuk rilisan terbatas, catatan jurnal studio, dan pratinjau musiman privat.
-          </p>
-
-          <form class="newsletter-form" id="newsletter-form">
-            <label for="newsletter-email" class="visually-hidden" style="display: none;">Alamat email</label>
-            <input 
-              type="email" 
-              id="newsletter-email" 
-              class="newsletter-input" 
-              placeholder="Masukkan alamat email Anda" 
-              required 
+          <!-- Right Banner: Women's Exclusive -->
+          <div class="split-banner-item">
+            <img 
+              src="images/banner_split_right.webp" 
+              alt="Women's Exclusive Lookbook" 
+              class="split-banner-image"
+              loading="lazy"
+              width="1440"
+              height="1801"
             />
-            <button type="submit" class="btn-primary" style="height: 48px; flex-shrink: 0;">
-              Berlangganan
-            </button>
-          </form>
-          <div id="newsletter-status" class="newsletter-status"></div>
-          <p class="text-body-sm" style="margin-top: 0.5rem;">
-            Bebas pesan promosi mengganggu. Berhenti berlangganan kapan saja dengan satu klik.
-          </p>
+            <a href="#essentials" class="split-hotspot-btn split-hotspot-right" aria-label="Shop Women's Exclusive collection"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ESSENTIALS PRODUCT GRID (4 COLUMNS) -->
+    <section class="catalog-section" id="essentials" aria-label="Essentials Products">
+      <div class="container">
+        <div class="section-label-header">
+          <h2 class="section-tag-heading">Essentials</h2>
+          <a href="#banner-editorial-1" class="btn-view-all" style="padding: 0; border: none; font-size: 0.75rem;">
+            <span>Next Campaign</span>
+            <span class="material-symbols-outlined" style="font-size: 14px;">arrow_downward</span>
+          </a>
+        </div>
+
+        <div class="products-grid-4">
+          <!-- Item 5: Sand Ribbed Tank -->
+          <article class="product-card" data-product-id="prod-05" tabindex="0" aria-label="Sand Ribbed Tank">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-05" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-05.webp" alt="Sand Ribbed Tank" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Sand Ribbed Tank</h3>
+              <span class="product-price">AED 166</span>
+            </div>
+          </article>
+
+          <!-- Item 6: Washed Denim Jacket -->
+          <article class="product-card" data-product-id="prod-06" tabindex="0" aria-label="Washed Denim Jacket">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-06" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-06.webp" alt="Washed Denim Jacket in charcoal" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Washed Denim Jacket</h3>
+              <span class="product-price">AED 400</span>
+            </div>
+          </article>
+
+          <!-- Item 7: Ivory Cable Sweater -->
+          <article class="product-card" data-product-id="prod-07" tabindex="0" aria-label="Ivory Cable Sweater">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-07" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-07.webp" alt="Ivory Cable Sweater in organic wool" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Ivory Cable Sweater</h3>
+              <span class="product-price">AED 336</span>
+            </div>
+          </article>
+
+          <!-- Item 8: Skyline Oversized Long -->
+          <article class="product-card" data-product-id="prod-08" tabindex="0" aria-label="Skyline Oversized Long">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-08" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-08.webp" alt="Skyline Oversized Long sleeve tee" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Skyline Oversized Long</h3>
+              <span class="product-price">AED 264</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-center-action">
+          <button class="btn-view-all" data-view-all-trigger="Essentials">
+            <span>View All</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EDITORIAL BANNER 1 ("EVERYDAY'S ESSENTIALS") -->
+    <section class="editorial-banner-section" id="banner-editorial-1" aria-label="Everyday's Essentials Story">
+      <div class="container">
+        <div class="editorial-banner-container">
+          <img 
+            src="images/banner_editorial_1.webp" 
+            alt="Everyday's Essentials: ByDelune Street Lookbook" 
+            class="editorial-banner-image"
+            loading="lazy"
+            width="2880"
+            height="1800"
+          />
+          <a href="#essentials" class="editorial-hotspot-btn hotspot-ed1" aria-label="Discover Everyday's Essentials Collection"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CAPS & ACCESSORIES PRODUCT GRID (4 COLUMNS) -->
+    <section class="catalog-section" id="accessories" aria-label="Caps and Accessories Collection">
+      <div class="container">
+        <div class="section-label-header">
+          <h2 class="section-tag-heading">Caps &amp; Accessories</h2>
+          <a href="#summer26" class="btn-view-all" style="padding: 0; border: none; font-size: 0.75rem;">
+            <span>Summer26 Lookbook</span>
+            <span class="material-symbols-outlined" style="font-size: 14px;">arrow_downward</span>
+          </a>
+        </div>
+
+        <div class="products-grid-4">
+          <!-- Item 9: Pasta Club Cap -->
+          <article class="product-card" data-product-id="prod-09" tabindex="0" aria-label="Pasta Club Cap">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-09" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-09.webp" alt="Pasta Club Cap in forest green and white" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Pasta Club Cap</h3>
+              <span class="product-price">AED 255</span>
+            </div>
+          </article>
+
+          <!-- Item 10: Crimson Cord Cap -->
+          <article class="product-card" data-product-id="prod-10" tabindex="0" aria-label="Crimson Cord Cap">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-10" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-10.webp" alt="Crimson Cord Cap in vintage corduroy" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Crimson Cord Cap</h3>
+              <span class="product-price">AED 277</span>
+            </div>
+          </article>
+
+          <!-- Item 11: Cream Cord Cap -->
+          <article class="product-card" data-product-id="prod-11" tabindex="0" aria-label="Cream Cord Cap">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-11" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-11.webp" alt="Cream Cord Cap in fine wide-wale corduroy" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Cream Cord Cap</h3>
+              <span class="product-price">AED 277</span>
+            </div>
+          </article>
+
+          <!-- Item 12: Olive Utility Cap -->
+          <article class="product-card" data-product-id="prod-12" tabindex="0" aria-label="Olive Utility Cap">
+            <div class="product-media-container">
+              <span class="product-card-badge">Essentials</span>
+              <button class="product-wishlist-btn" data-product-id="prod-12" aria-label="Save to wishlist">
+                <span class="material-symbols-outlined">favorite</span>
+              </button>
+              <img src="images/product-12.webp" alt="Olive Utility Cap camper ripstop" class="product-image" loading="lazy" />
+              <div class="product-quick-action">
+                <button class="btn-card-quickview" type="button">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <h3 class="product-title">Olive Utility Cap</h3>
+              <span class="product-price">AED 255</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-center-action">
+          <button class="btn-view-all" data-view-all-trigger="Caps">
+            <span>View All</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. EDITORIAL BANNER 2 ("SUMMER26") -->
+    <section class="editorial-banner-section" id="summer26" aria-label="Summer26 Campaign">
+      <div class="container">
+        <div class="editorial-banner-container">
+          <img 
+            src="images/banner_editorial_2.webp" 
+            alt="Summer26 Coastal Sunset Boat Campaign" 
+            class="editorial-banner-image"
+            loading="lazy"
+            width="2880"
+            height="1800"
+          />
+          <a href="#most-wanted" class="editorial-hotspot-btn hotspot-ed2" aria-label="Discover Summer26 Collection"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EDITORIAL BANNER 3 ("CHAPTER 1") -->
+    <section class="editorial-banner-section" id="chapter1" aria-label="Chapter 1 Lookbook">
+      <div class="container">
+        <div class="editorial-banner-container">
+          <img 
+            src="images/banner_editorial_3.webp" 
+            alt="Chapter 1 Meadow Atmosphere Campaign" 
+            class="editorial-banner-image"
+            loading="lazy"
+            width="2880"
+            height="1800"
+          />
+          <a href="#essentials" class="editorial-hotspot-btn hotspot-ed3" aria-label="Discover Chapter 1 Collection"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. EDITORIAL BANNER 4 ("EVERYDAY ESSENTIALS") -->
+    <section class="editorial-banner-section" id="editorial-stories" aria-label="Everyday Essentials Story">
+      <div class="container">
+        <div class="editorial-banner-container">
+          <img 
+            src="images/banner_editorial_4.webp" 
+            alt="Everyday Essentials Night Drive Campaign" 
+            class="editorial-banner-image"
+            loading="lazy"
+            width="2880"
+            height="1800"
+          />
+          <a href="#essentials" class="editorial-hotspot-btn hotspot-ed4" aria-label="Discover Everyday Essentials Collection"></a>
         </div>
       </div>
     </section>
@@ -691,153 +522,250 @@
   </main>
 
   <!-- =======================================================================
-       FOOTER SITUS
+       MASSIVE EDITORIAL FOOTER (FIGMA 1:1)
        ======================================================================= -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer" aria-label="Site Footer">
     <div class="container">
-      <div class="footer-grid">
-        <!-- Kolom 1: Profil Brand -->
-        <div>
-          <span class="text-headline-sm" style="font-weight: 600; letter-spacing: 0.08em; display: block; margin-bottom: 0.75rem;">
-            BYDELUNE
-          </span>
-          <p class="text-body-md" style="color: var(--on-surface-variant); max-width: 320px; margin-bottom: 1.25rem;">
-            Busana esensial modern untuk keseharian hidup. Siluet berpresisi tinggi dan keahlian pengerjaan tactile untuk konsumen discerning.
-          </p>
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-label-caps hover:text-on-surface">Instagram</a>
-            <span style="color: var(--border-light);">/</span>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="text-label-caps hover:text-on-surface">TikTok</a>
-            <span style="color: var(--border-light);">/</span>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="text-label-caps hover:text-on-surface">Pinterest</a>
+      <div class="footer-top-layout">
+        <!-- Left Navigation Columns -->
+        <div class="footer-nav-columns">
+          <!-- Column 1: Shop -->
+          <div>
+            <h4 class="footer-col-title">Shop</h4>
+            <ul class="footer-links-list">
+              <li><a href="#most-wanted" class="footer-link">Tees</a></li>
+              <li><a href="#most-wanted" class="footer-link">Hoodies</a></li>
+              <li><a href="#essentials" class="footer-link">Bottoms</a></li>
+              <li><a href="#accessories" class="footer-link">Caps</a></li>
+              <li><a href="#essentials" class="footer-link">Woman</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Collections -->
+          <div>
+            <h4 class="footer-col-title">Collections</h4>
+            <ul class="footer-links-list">
+              <li><a href="#most-wanted" class="footer-link">Most Wanted</a></li>
+              <li><a href="#chapter1" class="footer-link">Chapter 1</a></li>
+              <li><a href="#essentials" class="footer-link">Essentials</a></li>
+              <li><a href="#summer26" class="footer-link">Summer 26</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Boring Stuff -->
+          <div>
+            <h4 class="footer-col-title">Boring Stuff</h4>
+            <ul class="footer-links-list">
+              <li><a href="#policy" class="footer-link" data-policy-trigger="privacy">Privacy Policy</a></li>
+              <li><a href="#policy" class="footer-link" data-policy-trigger="terms">Terms and Conditions</a></li>
+              <li><a href="#policy" class="footer-link" data-policy-trigger="legal">Legal Notice</a></li>
+            </ul>
           </div>
         </div>
 
-        <!-- Kolom 2: Belanja -->
-        <div>
-          <h4 class="footer-col-title">Belanja</h4>
-          <ul class="footer-links-list">
-            <li><a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 4px;"><span>Toko Resmi Shopee</span><span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span></a></li>
-            <li><a href="#new-arrivals" class="footer-link">Koleksi Terbaru</a></li>
-            <li><a href="#categories" class="footer-link">Pria</a></li>
-            <li><a href="#categories" class="footer-link">Wanita</a></li>
-            <li><a href="#categories" class="footer-link">Alas Kaki</a></li>
-            <li><a href="#categories" class="footer-link">Aksesori</a></li>
-          </ul>
-        </div>
-
-        <!-- Kolom 3: Layanan Pelanggan -->
-        <div>
-          <h4 class="footer-col-title">Layanan Pelanggan</h4>
-          <ul class="footer-links-list">
-            <li><a href="#client-care" class="footer-link">Pengiriman &amp; Pesanan</a></li>
-            <li><a href="#client-care" class="footer-link">Kebijakan Retur</a></li>
-            <li><a href="#client-care" class="footer-link">Panduan Perawatan</a></li>
-            <li><a href="#client-care" class="footer-link">Kontak Concierge</a></li>
-          </ul>
-        </div>
-
-        <!-- Kolom 4: Tentang ByDelune -->
-        <div>
-          <h4 class="footer-col-title">Tentang ByDelune</h4>
-          <ul class="footer-links-list">
-            <li><a href="#editorial" class="footer-link">Filosofi Kami</a></li>
-            <li><a href="#editorial" class="footer-link">Material Bersertifikat GOTS</a></li>
-            <li><a href="#editorial" class="footer-link">Produksi Terbatas</a></li>
-            <li><a href="#editorial" class="footer-link">Laporan Keberlanjutan</a></li>
-          </ul>
+        <!-- Right: Giant Wordmark & Verified Badges -->
+        <div class="footer-brand-hero">
+          <span class="footer-wordmark">ByDelune</span>
+          <div class="footer-badge-pills">
+            <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="footer-pill-btn">
+              <span class="material-symbols-outlined" style="font-size: 16px;">storefront</span>
+              <span>Official Shopee Store</span>
+            </a>
+            <button class="footer-pill-btn" type="button" data-policy-trigger="legal">
+              <span class="material-symbols-outlined" style="font-size: 16px;">verified</span>
+              <span>Authentic Guarantee</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Baris Bawah -->
-      <div class="footer-bottom-row">
-        <p>&copy; 2026 BYDELUNE STORE. Hak cipta dilindungi undang-undang.</p>
+      <!-- Bottom Legal Bar -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 BYDELUNE · All Rights Reserved. Crafted with Quiet Luxury Ethos.</p>
         <div class="footer-bottom-links">
-          <a href="#" class="footer-link">Kebijakan Privasi</a>
-          <a href="#" class="footer-link">Syarat &amp; Ketentuan</a>
-          <a href="#" class="footer-link">Pengaturan Cookie</a>
+          <a href="#" class="footer-link" data-policy-trigger="privacy">Privacy</a>
+          <a href="#" class="footer-link" data-policy-trigger="terms">Terms</a>
+          <a href="#" class="footer-link" data-policy-trigger="legal">Security</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- =======================================================================
-       DRAWER & MODAL SAMPING
+       DRAWERS & MODALS
        ======================================================================= -->
 
-  <!-- Overlay Tirai Latar Belakang -->
+  <!-- Scrim Overlay Background -->
   <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
 
-  <!-- Drawer Daftar Keinginan (Wishlist) -->
-  <div class="side-drawer" id="wishlist-drawer" role="dialog" aria-modal="true" aria-labelledby="wishlist-drawer-title">
+  <!-- Shopping Bag (Cart) Drawer -->
+  <div class="side-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
     <div class="drawer-header">
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <span class="material-symbols-outlined">favorite</span>
-        <h3 id="wishlist-drawer-title" class="text-headline-sm">Daftar Keinginan (<span class="wishlist-count-badge">3</span>)</h3>
+      <div class="drawer-title" id="cart-drawer-title">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span>Shopping Bag</span>
       </div>
-      <button class="icon-btn" data-close-drawer aria-label="Tutup daftar keinginan">
+      <button class="icon-btn" data-close-drawer aria-label="Close shopping bag">
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
-
-    <div class="drawer-body" id="wishlist-items-list">
-      <!-- Item wishlist dinamis dirender oleh app.js -->
+    <div class="drawer-body" id="cart-items-list">
+      <!-- Dynamic cart items rendered by js/app.js -->
+    </div>
+    <div class="drawer-footer">
+      <p id="cart-shipping-notice" class="text-body-sm" style="margin-bottom: 0.75rem; color: var(--on-surface-variant);"></p>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
+        <span class="text-body-md" style="font-weight: 500;">Subtotal</span>
+        <span id="cart-subtotal-val" class="text-headline-sm" style="font-weight: 600;">AED 0</span>
+      </div>
+      <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-add-to-bag">
+        <span>Proceed to Official Checkout</span>
+        <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+      </a>
     </div>
   </div>
 
-  <!-- Drawer Navigasi Mobile -->
-  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title">
+  <!-- Wishlist Drawer -->
+  <div class="side-drawer" id="wishlist-drawer" role="dialog" aria-modal="true" aria-labelledby="wishlist-drawer-title">
     <div class="drawer-header">
-      <span id="mobile-nav-title" class="brand-logo" style="font-size: 1.125rem;">BYDELUNE</span>
-      <button class="icon-btn" data-close-drawer aria-label="Tutup menu navigasi">
+      <div class="drawer-title" id="wishlist-drawer-title">
+        <span class="material-symbols-outlined">favorite</span>
+        <span>Saved Wishlist</span>
+      </div>
+      <button class="icon-btn" data-close-drawer aria-label="Close wishlist">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="drawer-body" id="wishlist-items-list">
+      <!-- Dynamic wishlist items rendered by js/app.js -->
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="side-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-labelledby="mobile-nav-title">
+    <div class="drawer-header">
+      <span class="brand-logo" id="mobile-nav-title">BYDELUNE</span>
+      <button class="icon-btn" data-close-drawer aria-label="Close navigation">
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
     <div class="drawer-body">
       <nav style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
-        <a href="#new-arrivals" class="text-headline-sm" data-close-drawer>Koleksi Terbaru</a>
-        <a href="#categories" class="text-headline-sm" data-close-drawer>Kategori</a>
-        <a href="#featured" class="text-headline-sm" data-close-drawer>Pilihan Terbaik</a>
-        <a href="#editorial" class="text-headline-sm" data-close-drawer>Cerita Koleksi</a>
-        <a href="#client-care" class="text-headline-sm" data-close-drawer>Layanan Pelanggan</a>
-        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="text-headline-sm" style="color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
-          <span>Toko Resmi Shopee</span>
+        <a href="#most-wanted" class="text-headline-sm" data-close-drawer>Most Wanted</a>
+        <a href="#essentials" class="text-headline-sm" data-close-drawer>Essentials</a>
+        <a href="#accessories" class="text-headline-sm" data-close-drawer>Caps &amp; Accessories</a>
+        <a href="#summer26" class="text-headline-sm" data-close-drawer>Summer26 Lookbook</a>
+        <a href="#editorial-stories" class="text-headline-sm" data-close-drawer>Stories &amp; Campaigns</a>
+        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="text-headline-sm" style="font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+          <span>Shopee Official Store</span>
           <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
         </a>
       </nav>
 
-      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
-        <p class="text-label-caps" style="margin-bottom: 0.75rem;">Pengiriman Seluruh Indonesia</p>
-        <p class="text-body-sm">Gunakan voucher gratis ongkir Shopee untuk pengiriman hemat dan aman.</p>
+      <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+        <p class="text-body-sm" style="margin-bottom: 0.5rem; font-weight: 600;">Currency</p>
+        <div class="currency-switcher" style="margin-bottom: 1.5rem;">
+          <button class="currency-btn active" data-currency="AED">AED</button>
+          <button class="currency-btn" data-currency="IDR">IDR</button>
+        </div>
+        <p class="text-body-sm" style="color: var(--on-surface-variant);">
+          Complimentary insured shipping on all qualifying orders worldwide.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- Modal Pencarian Cepat -->
-  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+  <!-- Live Search Modal -->
+  <div class="search-modal-card" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-heading">
     <div class="container">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <h3 id="search-modal-title" class="text-label-caps">Pencarian Katalog</h3>
-        <button class="icon-btn" id="search-modal-close" aria-label="Tutup pencarian">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 id="search-modal-heading" class="text-label-caps" style="color: var(--on-surface-subtle); letter-spacing: 0.1em;">
+          Search ByDelune Catalog
+        </h3>
+        <button class="icon-btn" data-close-drawer aria-label="Close search">
           <span class="material-symbols-outlined">close</span>
         </button>
       </div>
-      <input 
-        type="search" 
-        id="search-input-field" 
-        class="search-input-large" 
-        placeholder="Ketik untuk mencari produk, material, atau kategori..." 
-      />
-      <div id="search-results-list" style="margin-top: 1.5rem;">
-        <p class="text-body-sm text-on-surface-variant">Ketik di atas untuk mencari busana berdasarkan nama, bahan, atau warna.</p>
+
+      <div class="search-input-box">
+        <input 
+          type="search" 
+          id="search-input-field" 
+          class="search-input-field" 
+          placeholder="Search sweater, hoodie, cap, denim, tee..." 
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-chips-row">
+        <button class="search-chip active" data-filter="all">All</button>
+        <button class="search-chip" data-filter="most wanted">Most Wanted</button>
+        <button class="search-chip" data-filter="essentials">Essentials</button>
+        <button class="search-chip" data-filter="caps">Caps</button>
+        <button class="search-chip" data-filter="tees">Tees</button>
+        <button class="search-chip" data-filter="hoodies">Hoodies</button>
+      </div>
+
+      <div class="search-results-grid" id="search-results-list">
+        <!-- Dynamic search results populated by js/app.js -->
       </div>
     </div>
   </div>
 
-  <!-- Notifikasi Toast -->
-  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
+  <!-- Quick View Modal -->
+  <div class="modal-dialog-card" id="quickview-modal" role="dialog" aria-modal="true" aria-labelledby="quickview-title-val">
+    <button class="modal-close-corner" data-close-drawer aria-label="Close quick view">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="quickview-grid">
+      <div class="quickview-media">
+        <img id="quickview-img" src="" alt="" />
+      </div>
+      <div class="quickview-content">
+        <div>
+          <span class="quickview-tag" id="quickview-tag-val"></span>
+          <h2 class="quickview-title" id="quickview-title-val"></h2>
+          <p class="quickview-price" id="quickview-price-val"></p>
+          <p class="quickview-desc" id="quickview-desc-val"></p>
 
-  <!-- Bundle Skrip JavaScript -->
+          <div class="size-selector-wrap">
+            <span class="size-selector-label">Select Size</span>
+            <div class="size-chips-list" id="quickview-sizes-chips">
+              <!-- Sizes injected by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <div class="quickview-actions">
+          <button class="btn-add-to-bag" id="quickview-add-bag-btn" type="button">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span>Add to Shopping Bag</span>
+          </button>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-buy-shopee" id="quickview-shopee-btn">
+            <span class="material-symbols-outlined">storefront</span>
+            <span>Order via Verified Shopee</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Policy & Legal Modal -->
+  <div class="modal-dialog-card" id="policy-modal" role="dialog" aria-modal="true" aria-labelledby="policy-modal-title" style="max-width: 600px;">
+    <button class="modal-close-corner" data-close-drawer aria-label="Close policy modal">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div style="padding: 2.5rem 2rem;">
+      <h3 id="policy-modal-title" class="text-headline-sm" style="margin-bottom: 1.25rem;"></h3>
+      <div id="policy-modal-body" class="text-body-md" style="color: var(--on-surface-variant); line-height: 1.65;"></div>
+      <button class="btn-pill-dark" style="margin-top: 2rem; width: 100%;" data-close-drawer>Close Notice</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Bar -->
+  <div class="toast-container" id="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript Bundle -->
   <script src="js/app.js"></script>
 </body>
 </html>
