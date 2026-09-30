@@ -11,12 +11,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BYDELUNE · Architectural Essentials &amp; Catalog" />
   <meta property="og:description" content="Discover a refined collection of breathable essentials made to move with you from coastal mornings to late evening escapes." />
-  <meta property="og:image" content="images/hero-banner.webp" />
+  <meta property="og:image" content="images/hero_raw.webp" />
   
-  <!-- Preconnect & Typography Fonts (Geist, Caveat, Plus Jakarta Sans) -->
+  <!-- Preconnect & Typography Fonts (Inter & Gloria Hallelujah, exact Menorca pairing) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Geist:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
   
   <!-- Stylesheet -->
@@ -38,13 +38,44 @@
 <body>
 
   <!-- =======================================================================
-       ANNOUNCEMENT TOP BAR
+       TOP MARQUEE TICKER (MENORCA SIGNATURE)
        ======================================================================= -->
-  <div class="announcement-bar">
-    <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" aria-label="Visit Official ByDelune Shopee Store">
-      <span>Official ByDelune Store · Complimentary Shipping Worldwide &amp; Domestic</span>
-      <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
-    </a>
+  <div class="marquee-ticker-wrap" aria-label="Store Announcement Ticker">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>30 days Easy Returns &amp; Exchanges</span>
+        <span class="ticker-dot">·</span>
+        <span>No extra fees on US orders: Taxes &amp; Duties Included</span>
+        <span class="ticker-dot">·</span>
+        <span>New Drop is Live Now</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-brand">BYDELUNE</span>
+        <span class="ticker-dot">·</span>
+        <span>Complimentary Insured Worldwide Shipping</span>
+        <span class="ticker-dot">·</span>
+        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+          Shop Official Shopee Store
+        </a>
+        <span class="ticker-dot">·</span>
+      </div>
+      <!-- Seamless infinite loop duplicate -->
+      <div class="marquee-content" aria-hidden="true">
+        <span>30 days Easy Returns &amp; Exchanges</span>
+        <span class="ticker-dot">·</span>
+        <span>No extra fees on US orders: Taxes &amp; Duties Included</span>
+        <span class="ticker-dot">·</span>
+        <span>New Drop is Live Now</span>
+        <span class="ticker-dot">·</span>
+        <span class="ticker-brand">BYDELUNE</span>
+        <span class="ticker-dot">·</span>
+        <span>Complimentary Insured Worldwide Shipping</span>
+        <span class="ticker-dot">·</span>
+        <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+          Shop Official Shopee Store
+        </a>
+        <span class="ticker-dot">·</span>
+      </div>
+    </div>
   </div>
 
   <!-- =======================================================================
@@ -59,11 +90,11 @@
 
       <!-- Desktop Navigation Menu -->
       <nav class="nav-links" aria-label="Main Navigation">
-        <a href="#most-wanted" class="nav-link">Most Wanted</a>
-        <a href="#essentials" class="nav-link">Essentials</a>
-        <a href="#accessories" class="nav-link">Caps &amp; Accessories</a>
-        <a href="#summer26" class="nav-link">Summer26</a>
-        <a href="#editorial-stories" class="nav-link">Lookbook</a>
+        <a href="#most-wanted" class="nav-link">Tees</a>
+        <a href="#most-wanted" class="nav-link">Hoodies</a>
+        <a href="#essentials" class="nav-link">Bottoms</a>
+        <a href="#accessories" class="nav-link">Caps</a>
+        <a href="#summer26" class="nav-link">Collections</a>
         <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="nav-link store-highlight" aria-label="Shopee Official Store">
           <span>Shopee Store</span>
           <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
@@ -108,30 +139,36 @@
        ======================================================================= -->
   <main id="main-content">
 
-    <!-- 1. HERO BANNER SECTION (FIGMA 1:1) -->
+    <!-- 1. HERO BANNER SECTION (MENORCA 1:1 LIVE TYPOGRAPHY OVER PHOTO) -->
     <section class="hero-banner-section" id="hero" aria-label="Hero Collection Banner">
       <div class="container">
-        <h1 class="sr-only">DESIGNED FOR LONG SUMMER DAYS, WARM NIGHTS AND ENDLESS SUN</h1>
         <div class="hero-banner-container">
+          <!-- Clean photograph without baked text -->
           <img 
-            src="images/hero-banner.webp" 
-            alt="Designed for long summer days, warm nights and endless sun: ByDelune Lookbook" 
+            src="images/hero_raw.webp" 
+            alt="Menorca coastal campaign: ByDelune Lookbook" 
             class="hero-banner-image"
             loading="eager"
-            width="2880"
-            height="1728"
+            width="2400"
+            height="1600"
           />
-          <!-- Interactive Hotspot Buttons overlaying the visual design -->
-          <div class="hero-hotspots-layer" aria-hidden="false">
-            <a href="#most-wanted" class="hero-btn-hotspot hero-btn-shop" aria-label="Shop collection: scroll to Most Wanted"></a>
-            <a href="#most-wanted" class="hero-btn-hotspot hero-btn-wanted" aria-label="Most Wanted: scroll to Most Wanted collection"></a>
-          </div>
-        </div>
+          <!-- Cinematic Scrim Gradient -->
+          <div class="hero-scrim-overlay" aria-hidden="true"></div>
 
-        <!-- Mobile Actions Fallback for small screens -->
-        <div class="hero-mobile-actions">
-          <a href="#most-wanted" class="btn-pill-dark">Shop Collection</a>
-          <a href="#most-wanted" class="btn-pill-outline">Most Wanted</a>
+          <!-- Live Center Typography with Gloria Hallelujah Script Accents -->
+          <div class="hero-content-wrapper">
+            <h1 class="hero-headline">
+              Designed for <span class="script-accent">Long</span> Summer Days,<br />
+              <span class="script-accent">Warm</span> Nights and <span class="script-accent">Endless</span> Sun
+            </h1>
+            <p class="hero-subtitle">
+              Discover a refined collection of breathable essentials made to move with you from coastal mornings to late evening escapes.
+            </p>
+            <div class="hero-btn-group">
+              <a href="#most-wanted" class="btn-framer-pill">Shop collection</a>
+              <a href="#most-wanted" class="btn-framer-pill">Most Wanted</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -522,7 +559,7 @@
   </main>
 
   <!-- =======================================================================
-       MASSIVE EDITORIAL FOOTER (FIGMA 1:1)
+       MASSIVE EDITORIAL FOOTER (MENORCA 1:1)
        ======================================================================= -->
   <footer class="site-footer" id="footer" aria-label="Site Footer">
     <div class="container">
@@ -651,11 +688,11 @@
     </div>
     <div class="drawer-body">
       <nav style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
-        <a href="#most-wanted" class="text-headline-sm" data-close-drawer>Most Wanted</a>
-        <a href="#essentials" class="text-headline-sm" data-close-drawer>Essentials</a>
-        <a href="#accessories" class="text-headline-sm" data-close-drawer>Caps &amp; Accessories</a>
-        <a href="#summer26" class="text-headline-sm" data-close-drawer>Summer26 Lookbook</a>
-        <a href="#editorial-stories" class="text-headline-sm" data-close-drawer>Stories &amp; Campaigns</a>
+        <a href="#most-wanted" class="text-headline-sm" data-close-drawer>Tees</a>
+        <a href="#most-wanted" class="text-headline-sm" data-close-drawer>Hoodies</a>
+        <a href="#essentials" class="text-headline-sm" data-close-drawer>Bottoms</a>
+        <a href="#accessories" class="text-headline-sm" data-close-drawer>Caps</a>
+        <a href="#summer26" class="text-headline-sm" data-close-drawer>Collections</a>
         <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="text-headline-sm" style="font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
           <span>Shopee Official Store</span>
           <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
