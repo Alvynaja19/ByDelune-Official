@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Most Wanted',
       priceAED: 349,
       priceIDR: 1485000,
-      image: 'images/product-01.webp',
+      image: 'images/product-01.webp?v=2',
       description: 'Chunky cable knit sweater crafted from 100% ethically sourced merino wool. Features ribbed cuffs, relaxed crew neck, and subtle tone-on-tone embroidery script.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Most Wanted',
       priceAED: 315,
       priceIDR: 1340000,
-      image: 'images/product-02.webp',
+      image: 'images/product-02.webp?v=2',
       description: 'Vintage collegiate styled polo tee in two-tone racing green and ecru stripes. Heavyweight 280gsm organic jersey cotton with open collar construction.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Most Wanted',
       priceAED: 374,
       priceIDR: 1590000,
-      image: 'images/product-03.webp',
+      image: 'images/product-03.webp?v=2',
       description: 'Sun-faded mineral wash hoodie with dual-way brushed metal zipper. Custom relaxed drape with drop shoulders and double-layered heavyweight hood.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Most Wanted',
       priceAED: 247,
       priceIDR: 1050000,
-      image: 'images/product-04.webp',
+      image: 'images/product-04.webp?v=2',
       description: 'Boxy cut graphic tee with ceramic cup artwork print. Enzyme washed for an ultra-soft hand feel, pre-shrunk organic cotton with reinforced rib collar.',
       sizes: ['XS', 'S', 'M', 'L'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 166,
       priceIDR: 710000,
-      image: 'images/product-05.webp',
+      image: 'images/product-05.webp?v=2',
       description: 'Sculpting fine-ribbed tank top in warm sand tone. Form-flattering stretch organic cotton blend with clean square neck profile and seamless hemlines.',
       sizes: ['XS', 'S', 'M', 'L'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 400,
       priceIDR: 1700000,
-      image: 'images/product-06.webp',
+      image: 'images/product-06.webp?v=2',
       description: 'Washed charcoal selvedge denim jacket with boxy cropped silhouette, antique silver shank hardware, and twin chest flap pockets.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 336,
       priceIDR: 1430000,
-      image: 'images/product-07.webp',
+      image: 'images/product-07.webp?v=2',
       description: 'Cropped ivory cable-knit pullover in lightweight airy wool blend. Delicate braided texture with softly rounded neckline and elongated ribbed sleeves.',
       sizes: ['XS', 'S', 'M', 'L'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 264,
       priceIDR: 1120000,
-      image: 'images/product-08.webp',
+      image: 'images/product-08.webp?v=2',
       description: 'Nautical sky blue and optic white bold striped long sleeve. Relaxed drop shoulder with wide ribbed cuffs and architectural side-slit hem.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 255,
       priceIDR: 1085000,
-      image: 'images/product-09.webp',
+      image: 'images/product-09.webp?v=2',
       description: 'Two-tone foam trucker cap with forest green visor and white crown mesh back. Features custom embroidered "Hot Girls Eat Pasta" script and snapback closure.',
       sizes: ['One Size'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 277,
       priceIDR: 1180000,
-      image: 'images/product-10.webp',
+      image: 'images/product-10.webp?v=2',
       description: 'Unstructured 6-panel dad cap in vintage crimson corduroy. Brass buckle strap closure with tonal eyelets and curved visor.',
       sizes: ['One Size'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 277,
       priceIDR: 1180000,
-      image: 'images/product-11.webp',
+      image: 'images/product-11.webp?v=2',
       description: 'Classic low-profile cap crafted from wide-wale cream corduroy. Soft unstructured crown with custom engraved antique metal slider backstrap.',
       sizes: ['One Size'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Essentials',
       priceAED: 255,
       priceIDR: 1085000,
-      image: 'images/product-12.webp',
+      image: 'images/product-12.webp?v=2',
       description: '5-panel military camper cap in water-repellent olive ripstop cotton. Low profile with nylon webbed clip backstrap.',
       sizes: ['One Size'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
