@@ -120,12 +120,6 @@
           <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
         </button>
 
-        <!-- Shopping Bag Button -->
-        <button class="icon-btn" data-trigger-cart aria-label="Open shopping bag">
-          <span class="material-symbols-outlined">shopping_bag</span>
-          <span class="badge-count cart-count-badge" style="display: none;">0</span>
-        </button>
-
         <!-- Mobile Menu Toggle -->
         <button class="icon-btn mobile-menu-toggle" data-trigger-mobile-nav aria-label="Open navigation menu">
           <span class="material-symbols-outlined">menu</span>
@@ -635,33 +629,6 @@
   <!-- Scrim Overlay Background -->
   <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
 
-  <!-- Shopping Bag (Cart) Drawer -->
-  <div class="side-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
-    <div class="drawer-header">
-      <div class="drawer-title" id="cart-drawer-title">
-        <span class="material-symbols-outlined">shopping_bag</span>
-        <span>Shopping Bag</span>
-      </div>
-      <button class="icon-btn" data-close-drawer aria-label="Close shopping bag">
-        <span class="material-symbols-outlined">close</span>
-      </button>
-    </div>
-    <div class="drawer-body" id="cart-items-list">
-      <!-- Dynamic cart items rendered by js/app.js -->
-    </div>
-    <div class="drawer-footer">
-      <p id="cart-shipping-notice" class="text-body-sm" style="margin-bottom: 0.75rem; color: var(--on-surface-variant);"></p>
-      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem;">
-        <span class="text-body-md" style="font-weight: 500;">Subtotal</span>
-        <span id="cart-subtotal-val" class="text-headline-sm" style="font-weight: 600;">AED 0</span>
-      </div>
-      <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-add-to-bag">
-        <span>Proceed to Official Checkout</span>
-        <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
-      </a>
-    </div>
-  </div>
-
   <!-- Wishlist Drawer -->
   <div class="side-drawer" id="wishlist-drawer" role="dialog" aria-modal="true" aria-labelledby="wishlist-drawer-title">
     <div class="drawer-header">
@@ -675,6 +642,16 @@
     </div>
     <div class="drawer-body" id="wishlist-items-list">
       <!-- Dynamic wishlist items rendered by js/app.js -->
+    </div>
+    <div class="drawer-footer" id="wishlist-drawer-footer">
+      <p class="text-body-sm" style="margin-bottom: 0.75rem; color: var(--on-surface-variant);">
+        Ready to order? Complete checkout directly through our verified Shopee storefront.
+      </p>
+      <a href="https://s.shopee.co.id/2VrCqjmv7l" target="_blank" rel="noopener noreferrer" class="btn-buy-shopee-primary" style="text-decoration: none;">
+        <span class="material-symbols-outlined" style="font-size: 18px;">storefront</span>
+        <span>Visit Official Shopee Store</span>
+        <span class="material-symbols-outlined" style="font-size: 14px;">open_in_new</span>
+      </a>
     </div>
   </div>
 
@@ -774,14 +751,15 @@
         </div>
 
         <div class="quickview-actions">
-          <button class="btn-add-to-bag" id="quickview-add-bag-btn" type="button">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span>Add to Shopping Bag</span>
-          </button>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-buy-shopee" id="quickview-shopee-btn">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-buy-shopee-primary" id="quickview-shopee-btn">
             <span class="material-symbols-outlined">storefront</span>
             <span>Order via Verified Shopee</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
           </a>
+          <button class="btn-quickview-wishlist" id="quickview-wishlist-btn" type="button">
+            <span class="material-symbols-outlined" id="quickview-wishlist-icon">favorite_border</span>
+            <span id="quickview-wishlist-text">Save to Wishlist</span>
+          </button>
         </div>
       </div>
     </div>

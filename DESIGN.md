@@ -134,7 +134,7 @@ Interaction is tactile, responsive, and deliberate: transitions are sharp, physi
 
 ## Core Rules & Anti-Slop Discipline
 1. No em dashes in UI text (use colons, middle dots, commas, or periods).
-2. All interactive elements are fully functioning (live cart drawer, wishlist drawer, mobile nav, search, category filter).
+2. All interactive elements are fully functioning (wishlist drawer, mobile nav, search, category filter, Shopee storefront).
 3. 4px razor-sharp corner radius; no pill-shaped buttons.
 4. Planar contrast and 1px hairline dividers (#E5E5E5) instead of drop shadows or heavy blur.
 5. Contrast standards strictly adhere to WCAG AA.

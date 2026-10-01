@@ -1,7 +1,7 @@
 /**
  * BYDELUNE: Storefront Engine & Interactivity
  * Figma Catalog 1:1 Implementation, Dual Currency (AED / IDR),
- * Live Cart Drawer, Wishlist Drawer, Search Modal, and Quick View.
+ * Wishlist Drawer, Search Modal, Quick View, and Shopee Direct Storefront.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -178,9 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const state = {
     currency: 'AED', // Default matches Figma export (AED)
     wishlist: new Set(['prod-01', 'prod-03']),
-    cart: [
-      { id: 'prod-01', size: 'M', quantity: 1 }
-    ],
     activeProduct: null
   };
 
@@ -204,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. DOM ELEMENTS
   // =========================================================================
   const overlay = document.getElementById('drawer-overlay');
-  const cartDrawer = document.getElementById('cart-drawer');
   const wishlistDrawer = document.getElementById('wishlist-drawer');
   const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
   const searchModal = document.getElementById('search-modal');
@@ -213,13 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastNotice = document.getElementById('toast-notice');
 
   // Counters
-  const cartCountBadges = document.querySelectorAll('.cart-count-badge');
   const wishlistCountBadges = document.querySelectorAll('.wishlist-count-badge');
 
   // Containers
-  const cartItemsList = document.getElementById('cart-items-list');
-  const cartSubtotalEl = document.getElementById('cart-subtotal-val');
-  const cartShippingNotice = document.getElementById('cart-shipping-notice');
   const wishlistItemsList = document.getElementById('wishlist-items-list');
 
   // Currency Toggle Buttons
@@ -244,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   function closeAllPanels() {
     overlay?.classList.remove('open');
-    cartDrawer?.classList.remove('open');
     wishlistDrawer?.classList.remove('open');
     mobileNavDrawer?.classList.remove('open');
     searchModal?.classList.remove('open');
@@ -306,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Re-render drawers
-    renderCart();
     renderWishlist();
 
     // Re-render Quick View if open
@@ -399,11 +389,11 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="cart-item-meta">${item.collection} · ${formatPrice(item)}</p>
             </div>
             <div class="cart-item-row">
-              <button class="btn-card-quickview" style="padding: 0.35rem 0.75rem; font-size: 0.6875rem;" onclick="window.addToBagFromWishlist('${item.id}')">
-                <span class="material-symbols-outlined" style="font-size: 14px;">shopping_bag</span>
-                <span>Move to Bag</span>
-              </button>
-              <button class="remove-btn" onclick="window.removeWishlistItem('${item.id}')">
+              <a href="${item.shopeeUrl}" target="_blank" rel="noopener noreferrer" class="btn-item-shopee" aria-label="Buy ${item.name} on Shopee">
+                <span>Buy on Shopee</span>
+                <span class="material-symbols-outlined" style="font-size: 13px;">open_in_new</span>
+              </a>
+              <button class="remove-btn" onclick="window.removeWishlistItem('${item.id}')" aria-label="Remove ${item.name} from wishlist">
                 Remove
               </button>
             </div>
@@ -419,15 +409,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleWishlist(id);
   };
 
-  window.addToBagFromWishlist = (id) => {
-    addToCart(id, 'M', 1);
-    state.wishlist.delete(id);
-    updateWishlistBadges();
-    updateCardWishlistButtons();
-    renderWishlist();
-    openDrawer(cartDrawer);
-  };
-
   // Open Wishlist Trigger
   document.querySelectorAll('[data-trigger-wishlist]').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -437,130 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================================================================
-  // 8. SHOPPING BAG (CART) MANAGEMENT
-  // =========================================================================
-  function addToCart(productId, size = 'M', quantity = 1) {
-    const item = products.find(p => p.id === productId);
-    if (!item) return;
 
-    const existing = state.cart.find(c => c.id === productId && c.size === size);
-    if (existing) {
-      existing.quantity += quantity;
-    } else {
-      state.cart.push({ id: productId, size, quantity });
-    }
-
-    updateCartBadges();
-    renderCart();
-    showToast(`Added to Bag: ${item.name} (${size})`);
-  }
-
-  function updateCartBadges() {
-    const totalItems = state.cart.reduce((sum, item) => sum + item.quantity, 0);
-    cartCountBadges.forEach(badge => {
-      badge.textContent = totalItems;
-      badge.style.display = totalItems > 0 ? 'inline-flex' : 'none';
-    });
-  }
-
-  function renderCart() {
-    if (!cartItemsList) return;
-
-    if (state.cart.length === 0) {
-      cartItemsList.innerHTML = `
-        <div class="empty-state-box">
-          <span class="material-symbols-outlined">shopping_bag</span>
-          <p class="text-body-md" style="font-weight: 500;">Your shopping bag is empty</p>
-          <p class="text-body-sm">Discover breathable essentials designed for coastal mornings to late evenings.</p>
-          <button class="btn-pill-dark" style="margin-top: 1rem;" data-close-drawer onclick="document.querySelector('#most-wanted')?.scrollIntoView({behavior: 'smooth'})">
-            Shop Collection
-          </button>
-        </div>
-      `;
-      if (cartSubtotalEl) cartSubtotalEl.textContent = formatAmount(0, 0);
-      if (cartShippingNotice) cartShippingNotice.textContent = 'Complimentary shipping on orders over AED 500 / Rp 1.500.000';
-      return;
-    }
-
-    let subtotalAED = 0;
-    let subtotalIDR = 0;
-    let html = '';
-
-    state.cart.forEach((entry, index) => {
-      const item = products.find(p => p.id === entry.id);
-      if (!item) return;
-
-      subtotalAED += item.priceAED * entry.quantity;
-      subtotalIDR += item.priceIDR * entry.quantity;
-
-      html += `
-        <div class="cart-item-card">
-          <div class="cart-item-thumb">
-            <img src="${item.image}" alt="${item.name}" loading="lazy" />
-          </div>
-          <div class="cart-item-info">
-            <div>
-              <h4 class="cart-item-title">${item.name}</h4>
-              <p class="cart-item-meta">Size: ${entry.size} · ${formatPrice(item)}</p>
-            </div>
-            <div class="cart-item-row">
-              <div class="qty-control">
-                <button class="qty-btn" aria-label="Decrease quantity" onclick="window.changeCartQty(${index}, -1)">-</button>
-                <span class="qty-value">${entry.quantity}</span>
-                <button class="qty-btn" aria-label="Increase quantity" onclick="window.changeCartQty(${index}, 1)">+</button>
-              </div>
-              <button class="remove-btn" onclick="window.removeCartItem(${index})">Remove</button>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-
-    cartItemsList.innerHTML = html;
-    if (cartSubtotalEl) {
-      cartSubtotalEl.textContent = formatAmount(subtotalAED, subtotalIDR);
-    }
-
-    if (cartShippingNotice) {
-      const freeThresholdAED = 500;
-      if (subtotalAED >= freeThresholdAED) {
-        cartShippingNotice.textContent = 'You qualify for complimentary worldwide shipping.';
-        cartShippingNotice.style.color = '#1b5e20';
-      } else {
-        const remainingAED = freeThresholdAED - subtotalAED;
-        const remainingIDR = Math.round(remainingAED * 4250);
-        cartShippingNotice.textContent = `Add ${formatAmount(remainingAED, remainingIDR)} more for complimentary shipping.`;
-        cartShippingNotice.style.color = 'var(--on-surface-variant)';
-      }
-    }
-  }
-
-  window.changeCartQty = (index, delta) => {
-    if (!state.cart[index]) return;
-    state.cart[index].quantity += delta;
-    if (state.cart[index].quantity <= 0) {
-      state.cart.splice(index, 1);
-    }
-    updateCartBadges();
-    renderCart();
-  };
-
-  window.removeCartItem = (index) => {
-    if (!state.cart[index]) return;
-    state.cart.splice(index, 1);
-    updateCartBadges();
-    renderCart();
-  };
-
-  // Open Cart Trigger
-  document.querySelectorAll('[data-trigger-cart]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      renderCart();
-      openDrawer(cartDrawer);
-    });
-  });
 
   // =========================================================================
   // 9. QUICK VIEW PRODUCT MODAL
@@ -612,20 +470,35 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    updateQuickViewWishlistState();
     closeAllPanels();
     overlay?.classList.add('open');
     quickViewModal?.classList.add('open');
     document.body.classList.add('modal-open');
   }
 
-  // Quick View Add to Bag Button
-  const qvAddToBagBtn = document.getElementById('quickview-add-bag-btn');
-  qvAddToBagBtn?.addEventListener('click', (e) => {
+  // Quick View Wishlist Button
+  const qvWishlistBtn = document.getElementById('quickview-wishlist-btn');
+  const qvWishlistIcon = document.getElementById('quickview-wishlist-icon');
+  const qvWishlistText = document.getElementById('quickview-wishlist-text');
+
+  function updateQuickViewWishlistState() {
+    if (!state.activeProduct || !qvWishlistBtn) return;
+    const isSaved = state.wishlist.has(state.activeProduct.id);
+    qvWishlistBtn.classList.toggle('active', isSaved);
+    if (qvWishlistIcon) {
+      qvWishlistIcon.textContent = isSaved ? 'favorite' : 'favorite_border';
+    }
+    if (qvWishlistText) {
+      qvWishlistText.textContent = isSaved ? 'Saved in Wishlist' : 'Save to Wishlist';
+    }
+  }
+
+  qvWishlistBtn?.addEventListener('click', (e) => {
     e.preventDefault();
     if (!state.activeProduct) return;
-    addToCart(state.activeProduct.id, selectedModalSize, 1);
-    closeAllPanels();
-    openDrawer(cartDrawer);
+    toggleWishlist(state.activeProduct.id);
+    updateQuickViewWishlistState();
   });
 
   // Attach card click handlers
@@ -827,8 +700,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   updateWishlistBadges();
   updateCardWishlistButtons();
-  updateCartBadges();
-  renderCart();
   renderWishlist();
 
   console.log('ByDelune Storefront initialized with 1:1 Figma catalog aesthetic.');

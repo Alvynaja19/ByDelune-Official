@@ -22,7 +22,7 @@ ByDelune/
 ├── css/
 │   └── styles.css    # Design tokens & component styles
 ├── js/
-│   └── app.js        # Interactive drawers, cart, and filter logic
+│   └── app.js        # Interactive drawers, wishlist, and filter logic
 ├── DESIGN.md         # Quiet Editorial design tokens and guidelines
 └── README.md
 ```
