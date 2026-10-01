@@ -784,6 +784,9 @@ ul, ol {
   border-radius: var(--radius-lg);
   background-color: #14181a;
   aspect-ratio: 1440 / 1801;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .split-banner-image {
@@ -796,46 +799,6 @@ ul, ol {
 
 .split-banner-item:hover .split-banner-image {
   transform: scale(1.03);
-}
-
-.split-hotspot-btn {
-  position: absolute;
-  top: 5.55%;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--trans-base);
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.split-hotspot-left {
-  left: 6.11%;
-  width: 18.68%;
-  height: 7.72%;
-}
-
-.split-hotspot-right {
-  left: 3.47%;
-  width: 31.18%;
-  height: 11.55%;
-}
-
-.split-hotspot-btn:hover {
-  background-color: #ffffff;
-  color: #111111;
-  border-color: #ffffff;
-  transform: scale(1.04);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
@@ -852,6 +815,9 @@ ul, ol {
   border-radius: var(--radius-lg);
   background-color: #14181a;
   aspect-ratio: 2880 / 1800;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .editorial-banner-image {
@@ -865,40 +831,6 @@ ul, ol {
 .editorial-banner-container:hover .editorial-banner-image {
   transform: scale(1.025);
 }
-
-.editorial-hotspot-btn {
-  position: absolute;
-  top: 5.56%;
-  left: 3.06%;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background-color: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--trans-base);
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.editorial-hotspot-btn:hover {
-  background-color: #ffffff;
-  color: #111111;
-  border-color: #ffffff;
-  transform: scale(1.04);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
-}
-
-.hotspot-ed1 { width: 14.27%; height: 7.72%; }
-.hotspot-ed2 { width: 10.73%; height: 7.73%; }
-.hotspot-ed3 { width: 10.73%; height: 7.78%; }
-.hotspot-ed4 { width: 13.68%; height: 7.73%; }
 
 @media (max-width: 768px) {
   .editorial-banner-container,
