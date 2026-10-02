@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Grid 1: Paling Diminati
     {
       id: 'prod-01',
-      name: 'Bonjour Cable Sweater',
-      category: 'Hoodie & Rajut',
+      name: 'Blus Renda Hitam',
+      category: 'Atasan & Rajut',
       collection: 'Paling Diminati',
       badge: 'Paling Diminati',
       priceAED: 349,
       priceIDR: 1485000,
       image: 'Blus%20Renda%20Hitam%20Transparan%20Elegan.png',
-      description: 'Sweater rajut kabel tebal yang dibuat dari 100% wol merino bersumber etis. Dilengkapi manset berusuk, kerah bulat santai, dan bordir tulisan halus yang elegan.',
+      description: 'Blus renda hitam transparan elegan dengan motif bordir artisanal halus. Potongan santai dengan siluet anggun dan berkelas.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
     },
