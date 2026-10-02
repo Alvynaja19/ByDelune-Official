@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Paling Diminati',
       priceAED: 349,
       priceIDR: 1485000,
-      image: 'images/product-01.webp?v=2',
+      image: 'Blus%20Renda%20Hitam%20Transparan%20Elegan.png',
       description: 'Sweater rajut kabel tebal yang dibuat dari 100% wol merino bersumber etis. Dilengkapi manset berusuk, kerah bulat santai, dan bordir tulisan halus yang elegan.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Paling Diminati',
       priceAED: 315,
       priceIDR: 1340000,
-      image: 'images/product-02.webp?v=2',
+      image: 'Duster%20Renda%20Gading%20Motif%20Bunga.png',
       description: 'Kaos polo bernuansa vintage dengan garis hijau balap dan ekru dua warna. Katun jersey organik 280gsm berkualitas tinggi dengan konstruksi kerah terbuka.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Paling Diminati',
       priceAED: 374,
       priceIDR: 1590000,
-      image: 'images/product-03.webp?v=2',
+      image: 'Gaun%20Renda%20Hitam%20Bermotif%20Bunga.png',
       description: 'Hoodie mineral wash dengan efek pudar alami dan ritsleting logam ganda. Potongan santai dengan bahu turun dan tudung tebal berlapis ganda.',
       sizes: ['S', 'M', 'L', 'XL'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       badge: 'Paling Diminati',
       priceAED: 247,
       priceIDR: 1050000,
-      image: 'images/product-04.webp?v=2',
+      image: 'Gaun%20Renda%20Hitam%20Transparan.png',
       description: 'Kaos berpotongan boxy dengan cetakan grafis cangkir keramik artistik. Dicuci enzim untuk tekstur lembut, katun organik bebas susut dengan kerah rusuk kokoh.',
       sizes: ['XS', 'S', 'M', 'L'],
       shopeeUrl: 'https://s.shopee.co.id/2VrCqjmv7l'
